@@ -1,1 +1,2 @@
 c:\users\tracy\documents\visual studio 2012\Projects\Assembler\Assembler\bin\Debug\Assembler.exe.config
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.exe.config

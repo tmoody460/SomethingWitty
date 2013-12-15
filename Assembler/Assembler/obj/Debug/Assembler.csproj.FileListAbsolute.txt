@@ -1,2 +1,7 @@
 c:\users\tracy\documents\visual studio 2012\Projects\Assembler\Assembler\bin\Debug\Assembler.exe.config
 C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.exe.config
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.exe
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.pdb
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.csprojResolveAssemblyReference.cache
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.exe
+C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.pdb

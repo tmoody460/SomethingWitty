@@ -1,0 +1,75 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+18
+1161
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ClockSplitter
+# storage
+db|Processor.(1).cnf
+db|Processor.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ClockSplitter.vhd
+e1affd198aaf581e52cd76d942cfe4c7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ClockSplitter:inst
+}
+# lmf
+..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Processor
+# storage
+db|Processor.(0).cnf
+db|Processor.(0).cnf
+# case_insensitive
+# source_file
+Processor.bdf
+31fad74a2b66bd1fd51149d4c388b46
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

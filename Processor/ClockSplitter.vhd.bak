@@ -1,0 +1,38 @@
+ENTITY ClockSplitter IS
+	PORT(
+		clk : IN BIT;
+		reset: IN BIT;
+		clk1: OUT BIT;
+		clk2: OUT BIT
+	);
+END ClockSplitter;
+
+ARCHITECTURE behavioral OF ClockSplitter IS
+	SIGNAL clk1Temp: BIT;
+	SIGNAL clk2Temp: BIT;
+BEGIN
+PROCESS(clk, reset)
+	VARIABLE changeFirstClock : BIT :='1';
+BEGIN
+	IF(reset = '1') THEN
+		clk1Temp <= '0';
+		clk2Temp <= '0';
+		changeFirstClock := '1';
+	ELSIF(clk'EVENT AND clk = '1') THEN
+		IF(changeFirstClock = '1') THEN
+			clk1Temp <= '1';
+			changeFirstClock := '0';
+		ELSE
+			clk2Temp <= '1';
+			changeFirstClock := '1';
+		END IF;
+	ELSIF(clk'EVENT AND clk = '0') THEN
+		clk1Temp <= '0';
+		clk2Temp <= '0';
+	END IF;
+END PROCESS;
+
+clk1<= clk1Temp;
+clk2<= clk2Temp;
+	
+END behavioral;

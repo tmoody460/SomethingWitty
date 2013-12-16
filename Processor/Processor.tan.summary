@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 24.800 ns
-From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]
-To             : outputPC[6]
+Actual Time    : 51.900 ns
+From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]
+To             : instruction[10]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0

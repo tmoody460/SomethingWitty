@@ -554,7 +554,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC";
+		SIGNAL = "instruction";
 		INDEX = 3;
 		FORMAT = T;
 		SCALE = 1;
@@ -562,7 +562,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[7]";
+		SIGNAL = "instruction[15]";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -570,7 +570,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[6]";
+		SIGNAL = "instruction[14]";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -578,7 +578,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[5]";
+		SIGNAL = "instruction[13]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -586,7 +586,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[4]";
+		SIGNAL = "instruction[12]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -594,7 +594,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[3]";
+		SIGNAL = "instruction[11]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -602,7 +602,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[2]";
+		SIGNAL = "instruction[10]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -610,7 +610,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[1]";
+		SIGNAL = "instruction[9]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -618,7 +618,7 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outputPC[0]";
+		SIGNAL = "instruction[8]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -626,8 +626,144 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reset";
+		SIGNAL = "instruction[7]";
 		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[6]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[5]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[4]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[3]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[2]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[1]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "instruction[0]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC";
+		INDEX = 20;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[7]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[6]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[5]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[4]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[3]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[2]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[1]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outputPC[0]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reset";
+		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

@@ -1,5 +1,5 @@
 Simulator report for Processor
-Mon Dec 16 16:48:11 2013
+Mon Dec 16 17:44:27 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,12 +10,13 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Simulator Summary
   3. Simulator Settings
   4. Simulation Waveforms
-  5. Coverage Summary
-  6. Complete 1/0-Value Coverage
-  7. Missing 1-Value Coverage
-  8. Missing 0-Value Coverage
-  9. Simulator INI Usage
- 10. Simulator Messages
+  5. |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|content
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
 
 
 
@@ -45,42 +46,42 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 100.0 ns     ;
-; Simulation Netlist Size     ; 96 nodes     ;
-; Simulation Coverage         ;      32.04 % ;
-; Total Number of Transitions ; 177          ;
+; Simulation Netlist Size     ; 144 nodes    ;
+; Simulation Coverage         ;      43.71 % ;
+; Total Number of Transitions ; 289          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; FLEX10K      ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                 ;
-+--------------------------------------------------------------------------------------------+-----------------------+---------------+
-; Option                                                                                     ; Setting               ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------+---------------+
-; Simulation mode                                                                            ; Functional            ; Timing        ;
-; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
-; End time                                                                                   ; 100 ns                ;               ;
-; Simulation results format                                                                  ; CVWF                  ;               ;
-; Vector input source                                                                        ; PCIncrementorTest.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
-; Check outputs                                                                              ; Off                   ; Off           ;
-; Report simulation coverage                                                                 ; On                    ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
-; Display missing 1-value coverage report                                                    ; On                    ; On            ;
-; Display missing 0-value coverage report                                                    ; On                    ; On            ;
-; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
-; Detect glitches                                                                            ; Off                   ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
-; Generate Signal Activity File                                                              ; Off                   ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
-+--------------------------------------------------------------------------------------------+-----------------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                       ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Option                                                                                     ; Setting     ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
+; Simulation mode                                                                            ; Functional  ; Timing        ;
+; Start time                                                                                 ; 0 ns        ; 0 ns          ;
+; End time                                                                                   ; 100 ns      ;               ;
+; Simulation results format                                                                  ; CVWF        ;               ;
+; Vector input source                                                                        ; ROMTest.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On          ; On            ;
+; Check outputs                                                                              ; Off         ; Off           ;
+; Report simulation coverage                                                                 ; On          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On          ; On            ;
+; Display missing 1-value coverage report                                                    ; On          ; On            ;
+; Display missing 0-value coverage report                                                    ; On          ; On            ;
+; Detect setup and hold time violations                                                      ; Off         ; Off           ;
+; Detect glitches                                                                            ; Off         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off         ; Off           ;
+; Generate Signal Activity File                                                              ; Off         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto        ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------+---------------+
 
 
 +----------------------+
@@ -91,17 +92,24 @@ Please use Quartus II to view the waveform report data.
 
 
 +--------------------------------------------------------------------+
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|content ;
++--------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
 ; Coverage Summary                                                   ;
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      32.04 % ;
-; Total nodes checked                                 ; 96           ;
-; Total output ports checked                          ; 103          ;
-; Total output ports with complete 1/0-value coverage ; 33           ;
-; Total output ports with no 1/0-value coverage       ; 66           ;
-; Total output ports with no 1-value coverage         ; 66           ;
-; Total output ports with no 0-value coverage         ; 70           ;
+; Total coverage as a percentage                      ;      43.71 % ;
+; Total nodes checked                                 ; 144          ;
+; Total output ports checked                          ; 151          ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 72           ;
+; Total output ports with no 1-value coverage         ; 72           ;
+; Total output ports with no 0-value coverage         ; 85           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -114,10 +122,43 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Processor|clk2                                                                                    ; |Processor|clk2                                                                                         ; pin_out          ;
 ; |Processor|clk                                                                                     ; |Processor|clk                                                                                          ; out              ;
 ; |Processor|clk1                                                                                    ; |Processor|clk1                                                                                         ; pin_out          ;
+; |Processor|instruction[14]                                                                         ; |Processor|instruction[14]                                                                              ; pin_out          ;
+; |Processor|instruction[13]                                                                         ; |Processor|instruction[13]                                                                              ; pin_out          ;
+; |Processor|instruction[12]                                                                         ; |Processor|instruction[12]                                                                              ; pin_out          ;
+; |Processor|instruction[7]                                                                          ; |Processor|instruction[7]                                                                               ; pin_out          ;
+; |Processor|instruction[6]                                                                          ; |Processor|instruction[6]                                                                               ; pin_out          ;
+; |Processor|instruction[5]                                                                          ; |Processor|instruction[5]                                                                               ; pin_out          ;
+; |Processor|instruction[4]                                                                          ; |Processor|instruction[4]                                                                               ; pin_out          ;
+; |Processor|instruction[3]                                                                          ; |Processor|instruction[3]                                                                               ; pin_out          ;
+; |Processor|instruction[2]                                                                          ; |Processor|instruction[2]                                                                               ; pin_out          ;
+; |Processor|instruction[1]                                                                          ; |Processor|instruction[1]                                                                               ; pin_out          ;
+; |Processor|instruction[0]                                                                          ; |Processor|instruction[0]                                                                               ; pin_out          ;
 ; |Processor|outputPC[1]                                                                             ; |Processor|outputPC[1]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[0]                                                                             ; |Processor|outputPC[0]                                                                                  ; pin_out          ;
 ; |Processor|ProgramCounter:inst1|tempPC[0]                                                          ; |Processor|ProgramCounter:inst1|tempPC[0]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[1]                                                          ; |Processor|ProgramCounter:inst1|tempPC[1]                                                               ; regout           ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[14]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[14]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[13]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[13]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[12]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[12]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[7]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[7]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[6]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[6]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[5]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[5]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[4]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[4]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[3]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[3]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[2]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[2]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[1]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[1]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[0]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[0]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][14]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[14]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][13]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[13]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][12]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[12]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][7]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[7]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][6]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[6]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][5]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[5]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][4]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[4]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][3]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[3]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][2]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[2]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][1]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[1]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][0]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[0]                                         ; dataout          ;
 ; |Processor|ClockSplitter:inst|clk1Temp                                                             ; |Processor|ClockSplitter:inst|clk1Temp                                                                  ; regout           ;
 ; |Processor|ClockSplitter:inst|clk2Temp                                                             ; |Processor|ClockSplitter:inst|clk2Temp                                                                  ; regout           ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[0]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
@@ -154,6 +195,8 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 ; |Processor|reset                                                                                   ; |Processor|reset                                                                                        ; out              ;
+; |Processor|instruction[11]                                                                         ; |Processor|instruction[11]                                                                              ; pin_out          ;
+; |Processor|instruction[10]                                                                         ; |Processor|instruction[10]                                                                              ; pin_out          ;
 ; |Processor|outputPC[7]                                                                             ; |Processor|outputPC[7]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[6]                                                                             ; |Processor|outputPC[6]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
@@ -164,6 +207,10 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Processor|ProgramCounter:inst1|tempPC[5]                                                          ; |Processor|ProgramCounter:inst1|tempPC[5]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[6]                                                          ; |Processor|ProgramCounter:inst1|tempPC[6]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[7]                                                          ; |Processor|ProgramCounter:inst1|tempPC[7]                                                               ; regout           ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[11]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[11]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[10]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[10]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][11]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[11]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][10]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[10]                                        ; dataout          ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
@@ -229,6 +276,11 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 ; |Processor|reset                                                                                   ; |Processor|reset                                                                                        ; out              ;
+; |Processor|instruction[15]                                                                         ; |Processor|instruction[15]                                                                              ; pin_out          ;
+; |Processor|instruction[11]                                                                         ; |Processor|instruction[11]                                                                              ; pin_out          ;
+; |Processor|instruction[10]                                                                         ; |Processor|instruction[10]                                                                              ; pin_out          ;
+; |Processor|instruction[9]                                                                          ; |Processor|instruction[9]                                                                               ; pin_out          ;
+; |Processor|instruction[8]                                                                          ; |Processor|instruction[8]                                                                               ; pin_out          ;
 ; |Processor|outputPC[7]                                                                             ; |Processor|outputPC[7]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[6]                                                                             ; |Processor|outputPC[6]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
@@ -241,6 +293,16 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Processor|ProgramCounter:inst1|tempPC[5]                                                          ; |Processor|ProgramCounter:inst1|tempPC[5]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[6]                                                          ; |Processor|ProgramCounter:inst1|tempPC[6]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[7]                                                          ; |Processor|ProgramCounter:inst1|tempPC[7]                                                               ; regout           ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[15]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[15]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[11]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[11]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[10]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[10]                                                 ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[9]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[9]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[8]                                             ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[8]                                                  ; out              ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][15]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[15]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][11]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[11]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][10]                          ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[10]                                        ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][9]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[9]                                         ; dataout          ;
+; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|segment[0][8]                           ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[8]                                         ; dataout          ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
@@ -314,18 +376,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 16:48:10 2013
+    Info: Processing started: Mon Dec 16 17:44:26 2013
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Processor -c Processor
-Info: Using vector source file "C:/Users/Tracy/Desktop/SomethingWitty/Processor/PCIncrementorTest.vwf"
+Info: Using vector source file "C:/Users/Tracy/Desktop/SomethingWitty/Processor/ROMTest.vwf"
 Info: Simulation end time 100.0 ns did not reach the end of the input vector, which ended at 1.0 us
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      32.04 %
-Info: Number of transitions in simulation is 177
+Info: Simulation coverage is      43.71 %
+Info: Number of transitions in simulation is 289
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 155 megabytes
-    Info: Processing ended: Mon Dec 16 16:48:11 2013
+    Info: Peak virtual memory: 156 megabytes
+    Info: Processing ended: Mon Dec 16 17:44:27 2013
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

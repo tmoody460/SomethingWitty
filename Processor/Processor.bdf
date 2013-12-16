@@ -100,6 +100,22 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
 )
+(pin
+	(output)
+	(rect 960 336 1137 352)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "instruction[15..0]" (rect 90 0 172 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
 (symbol
 	(rect 288 272 384 368)
 	(text "ClockSplitter" (rect 5 0 67 12)(font "Arial" ))
@@ -187,6 +203,35 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 144 80)(line_width 1))
 	)
 )
+(symbol
+	(rect 712 312 928 432)
+	(text "Rom" (rect 95 1 126 17)(font "Arial" (font_size 10)))
+	(text "inst3" (rect 8 104 31 116)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "address[7..0]" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "address[7..0]" (rect 4 19 79 33)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 104 32)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "q[15..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "q[15..0]" (rect 177 19 219 33)(font "Arial" (font_size 8)))
+		(line (pt 216 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(text "16 bits" (rect 108 46 120 79)(font "Arial" )(vertical))
+		(text "256 words" (rect 121 39 133 88)(font "Arial" )(vertical))
+		(line (pt 104 24)(pt 136 24)(line_width 1))
+		(line (pt 136 24)(pt 136 96)(line_width 1))
+		(line (pt 136 96)(pt 104 96)(line_width 1))
+		(line (pt 104 96)(pt 104 24)(line_width 1))
+		(line (pt 118 58)(pt 123 63)(line_width 1))
+		(line (pt 118 62)(pt 123 57)(line_width 1))
+	)
+)
 (connector
 	(pt 288 304)
 	(pt 264 304)
@@ -214,11 +259,6 @@ applicable agreement for further details.
 (connector
 	(pt 384 320)
 	(pt 440 320)
-)
-(connector
-	(pt 680 104)
-	(pt 680 200)
-	(bus)
 )
 (connector
 	(pt 648 104)
@@ -255,5 +295,26 @@ applicable agreement for further details.
 	(pt 472 104)
 	(bus)
 )
+(connector
+	(pt 712 344)
+	(pt 680 344)
+	(bus)
+)
+(connector
+	(pt 680 104)
+	(pt 680 200)
+	(bus)
+)
+(connector
+	(pt 680 200)
+	(pt 680 344)
+	(bus)
+)
+(connector
+	(pt 928 344)
+	(pt 960 344)
+	(bus)
+)
 (junction (pt 416 304))
 (junction (pt 680 104))
+(junction (pt 680 200))

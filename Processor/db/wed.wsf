@@ -515,8 +515,8 @@ VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/PCTest.vwf")
 VECTOR("C:/Users/Tracy/Desktop/SomethingWitty/Processor/db/Processor.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 30400;
+		ZBEGIN = 29400;
+		ZEND = 59800;
 		NUMERATOR = 20;
 		DENOMINATOR = 1000;
 		TOP_INDEX = 0;

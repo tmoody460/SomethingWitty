@@ -1,5 +1,5 @@
 Assembler report for Processor
-Mon Dec 16 17:42:37 2013
+Mon Dec 16 17:53:14 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Dec 16 17:42:37 2013 ;
+; Assembler Status      ; Successful - Mon Dec 16 17:53:14 2013 ;
 ; Revision Name         ; Processor                             ;
 ; Top-level Entity Name ; Processor                             ;
 ; Family                ; FLEX10K                               ;
@@ -113,12 +113,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 17:42:36 2013
+    Info: Processing started: Mon Dec 16 17:53:13 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Processor -c Processor
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 200 megabytes
-    Info: Processing ended: Mon Dec 16 17:42:37 2013
+    Info: Processing ended: Mon Dec 16 17:53:14 2013
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

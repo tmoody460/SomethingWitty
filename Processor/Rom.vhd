@@ -77,7 +77,7 @@ BEGIN
 	GENERIC MAP (
 		intended_device_family => "FLEX10K",
 		lpm_address_control => "UNREGISTERED",
-		lpm_file => "../../output.mif",
+		lpm_file => "../output.mif",
 		lpm_outdata => "UNREGISTERED",
 		lpm_type => "LPM_ROM",
 		lpm_width => 16,
@@ -112,7 +112,7 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "256"
--- Retrieval info: PRIVATE: MIFfilename STRING "../../output.mif"
+-- Retrieval info: PRIVATE: MIFfilename STRING "../output.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
 -- Retrieval info: PRIVATE: OutputRegistered NUMERIC "0"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
@@ -127,7 +127,7 @@ END SYN;
 -- Retrieval info: PRIVATE: rden NUMERIC "0"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "FLEX10K"
 -- Retrieval info: CONSTANT: LPM_ADDRESS_CONTROL STRING "UNREGISTERED"
--- Retrieval info: CONSTANT: LPM_FILE STRING "../../output.mif"
+-- Retrieval info: CONSTANT: LPM_FILE STRING "../output.mif"
 -- Retrieval info: CONSTANT: LPM_OUTDATA STRING "UNREGISTERED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_ROM"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"

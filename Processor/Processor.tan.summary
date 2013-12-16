@@ -2,42 +2,22 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
-Type           : Worst-case tsu
-Slack          : N/A
-Required Time  : None
-Actual Time    : 1.000 ns
-From           : inputPC[4]
-To             : ProgramCounter:inst1|tempPC[4]
-From Clock     : --
-To Clock       : clk
-Failed Paths   : 0
-
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 27.800 ns
-From           : ProgramCounter:inst1|tempPC[2]
-To             : outputPC[2]
+Actual Time    : 24.800 ns
+From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]
+To             : outputPC[6]
 From Clock     : clk
 To Clock       : --
-Failed Paths   : 0
-
-Type           : Worst-case th
-Slack          : N/A
-Required Time  : None
-Actual Time    : 11.100 ns
-From           : inputPC[6]
-To             : ProgramCounter:inst1|tempPC[6]
-From Clock     : --
-To Clock       : clk
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
 Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
-From           : ClockSplitter:inst|clk1Temp
-To             : ClockSplitter:inst|clk1Temp
+From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

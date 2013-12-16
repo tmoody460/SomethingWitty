@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Mon Dec 16 16:08:13 2013
+Mon Dec 16 16:45:50 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -14,7 +14,9 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Inverted Register Statistics
-  9. Analysis & Synthesis Messages
+  9. Source assignments for ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
+ 10. Parameter Settings for Inferred Entity Instance: ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +42,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 16 16:08:13 2013        ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 16 16:45:50 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; Processor                                    ;
 ; Top-level Entity Name       ; Processor                                    ;
 ; Family                      ; FLEX10K                                      ;
 ; Total logic elements        ; 10                                           ;
-; Total pins                  ; 20                                           ;
+; Total pins                  ; 12                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -113,47 +115,66 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
-; Processor.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Nathan/SomethingWitty/Processor/Processor.bdf      ;
-; ClockSplitter.vhd                ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/ClockSplitter.vhd  ;
-; ProgramCounter.vhd               ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/ProgramCounter.vhd ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; Processor.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/Processor.bdf           ;
+; ClockSplitter.vhd                ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/ClockSplitter.vhd       ;
+; ProgramCounter.vhd               ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/ProgramCounter.vhd      ;
+; PCIncrementor.vhd                ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/PCIncrementor.vhd       ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc        ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc          ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc            ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc              ;
+; alt_synch_counter.inc            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc   ;
+; alt_synch_counter_f.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc ;
+; alt_counter_f10ke.inc            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc   ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
+; alt_counter_f10ke.tdf            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf   ;
+; flex10ke_lcell.inc               ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+--------------------------------+-----------------------------+
-; Resource                       ; Usage                       ;
-+--------------------------------+-----------------------------+
-; Total logic elements           ; 10                          ;
-; Total combinational functions  ; 2                           ;
-;     -- Total 4-input functions ; 0                           ;
-;     -- Total 3-input functions ; 0                           ;
-;     -- Total 2-input functions ; 0                           ;
-;     -- Total 1-input functions ; 2                           ;
-;     -- Total 0-input functions ; 0                           ;
-; Total registers                ; 10                          ;
-; I/O pins                       ; 20                          ;
-; Maximum fan-out node           ; ClockSplitter:inst|clk1Temp ;
-; Maximum fan-out                ; 10                          ;
-; Total fan-out                  ; 32                          ;
-; Average fan-out                ; 1.07                        ;
-+--------------------------------+-----------------------------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++-----------------------------------+-----------------------------+
+; Resource                          ; Usage                       ;
++-----------------------------------+-----------------------------+
+; Total logic elements              ; 10                          ;
+; Total combinational functions     ; 10                          ;
+;     -- Total 4-input functions    ; 0                           ;
+;     -- Total 3-input functions    ; 0                           ;
+;     -- Total 2-input functions    ; 0                           ;
+;     -- Total 1-input functions    ; 2                           ;
+;     -- Total 0-input functions    ; 8                           ;
+; Total registers                   ; 10                          ;
+; Total logic cells in carry chains ; 8                           ;
+; I/O pins                          ; 12                          ;
+; Maximum fan-out node              ; ClockSplitter:inst|clk1Temp ;
+; Maximum fan-out                   ; 10                          ;
+; Total fan-out                     ; 31                          ;
+; Average fan-out                   ; 1.41                        ;
++-----------------------------------+-----------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
-; |Processor                 ; 10 (0)      ; 10           ; 0           ; 20   ; 0 (0)        ; 8 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |Processor                      ; work         ;
-;    |ClockSplitter:inst|    ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Processor|ClockSplitter:inst   ; work         ;
-;    |ProgramCounter:inst1|  ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1 ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                     ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
+; |Processor                                ; 10 (0)      ; 10           ; 0           ; 12   ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 8 (0)           ; 0 (0)      ; |Processor                                                                              ; work         ;
+;    |ClockSplitter:inst|                   ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Processor|ClockSplitter:inst                                                           ; work         ;
+;    |ProgramCounter:inst1|                 ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1                                                         ; work         ;
+;       |lpm_counter:tempPC_rtl_0|          ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1|lpm_counter:tempPC_rtl_0                                ; work         ;
+;          |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |Processor|ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -182,13 +203,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
++----------------------------------------------------------------------+
+; Source assignments for ProgramCounter:inst1|lpm_counter:tempPC_rtl_0 ;
++---------------------------+-------+------+---------------------------+
+; Assignment                ; Value ; From ; To                        ;
++---------------------------+-------+------+---------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                         ;
++---------------------------+-------+------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ProgramCounter:inst1|lpm_counter:tempPC_rtl_0 ;
++------------------------+-------------------+---------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                              ;
++------------------------+-------------------+---------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                    ;
+; LPM_WIDTH              ; 8                 ; Untyped                                           ;
+; LPM_DIRECTION          ; UP                ; Untyped                                           ;
+; LPM_MODULUS            ; 0                 ; Untyped                                           ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                           ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                           ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                           ;
+; DEVICE_FAMILY          ; FLEX10K           ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                           ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                           ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                           ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                           ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                           ;
++------------------------+-------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 16:08:10 2013
+    Info: Processing started: Mon Dec 16 16:45:45 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Info: Found 1 design units, including 1 entities, in source file Processor.bdf
     Info: Found entity 1: Processor
@@ -201,17 +260,29 @@ Info: Found 2 design units, including 1 entities, in source file ClockSplitter.v
 Info: Found 2 design units, including 1 entities, in source file ProgramCounter.vhd
     Info: Found design unit 1: ProgramCounter-behaviour
     Info: Found entity 1: ProgramCounter
+Info: Found 2 design units, including 1 entities, in source file PCIncrementor.vhd
+    Info: Found design unit 1: PCIncrementor-behavior
+    Info: Found entity 1: PCIncrementor
 Info: Elaborating entity "Processor" for the top level hierarchy
 Info: Elaborating entity "ClockSplitter" for hierarchy "ClockSplitter:inst"
 Info: Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:inst1"
-Info: Implemented 30 device resources after synthesis - the final resource count might be different
-    Info: Implemented 10 input pins
+Info: Elaborating entity "PCIncrementor" for hierarchy "PCIncrementor:inst2"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "ProgramCounter:inst1|tempPC[0]~0"
+Info: Elaborated megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0"
+Info: Instantiated megafunction "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info: Elaborated megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0"
+Info: Implemented 22 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
     Info: Implemented 10 output pins
     Info: Implemented 10 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 240 megabytes
-    Info: Processing ended: Mon Dec 16 16:08:13 2013
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Mon Dec 16 16:45:50 2013
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

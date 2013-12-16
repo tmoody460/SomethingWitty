@@ -11,14 +11,6 @@ outputPC[4] <= ProgramCounter:inst1.outPC[4]
 outputPC[5] <= ProgramCounter:inst1.outPC[5]
 outputPC[6] <= ProgramCounter:inst1.outPC[6]
 outputPC[7] <= ProgramCounter:inst1.outPC[7]
-inputPC[0] => ProgramCounter:inst1.nextPC[0]
-inputPC[1] => ProgramCounter:inst1.nextPC[1]
-inputPC[2] => ProgramCounter:inst1.nextPC[2]
-inputPC[3] => ProgramCounter:inst1.nextPC[3]
-inputPC[4] => ProgramCounter:inst1.nextPC[4]
-inputPC[5] => ProgramCounter:inst1.nextPC[5]
-inputPC[6] => ProgramCounter:inst1.nextPC[6]
-inputPC[7] => ProgramCounter:inst1.nextPC[7]
 
 
 |Processor|ClockSplitter:inst
@@ -55,5 +47,24 @@ outPC[4] <= tempPC[4].DB_MAX_OUTPUT_PORT_TYPE
 outPC[5] <= tempPC[5].DB_MAX_OUTPUT_PORT_TYPE
 outPC[6] <= tempPC[6].DB_MAX_OUTPUT_PORT_TYPE
 outPC[7] <= tempPC[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|PCIncrementor:inst2
+inPC[0] => Add0.IN16
+inPC[1] => Add0.IN15
+inPC[2] => Add0.IN14
+inPC[3] => Add0.IN13
+inPC[4] => Add0.IN12
+inPC[5] => Add0.IN11
+inPC[6] => Add0.IN10
+inPC[7] => Add0.IN9
+outPC[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+outPC[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 

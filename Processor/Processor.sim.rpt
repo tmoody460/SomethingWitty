@@ -1,5 +1,5 @@
 Simulator report for Processor
-Mon Dec 16 16:29:45 2013
+Mon Dec 16 16:48:11 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -45,42 +45,42 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 100.0 ns     ;
-; Simulation Netlist Size     ; 30 nodes     ;
-; Simulation Coverage         ;      16.67 % ;
-; Total Number of Transitions ; 62           ;
+; Simulation Netlist Size     ; 96 nodes     ;
+; Simulation Coverage         ;      32.04 % ;
+; Total Number of Transitions ; 177          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; FLEX10K      ;
 +-----------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                      ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Option                                                                                     ; Setting    ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Simulation mode                                                                            ; Functional ; Timing        ;
-; Start time                                                                                 ; 0 ns       ; 0 ns          ;
-; End time                                                                                   ; 100 ns     ;               ;
-; Simulation results format                                                                  ; CVWF       ;               ;
-; Vector input source                                                                        ; PCTest.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
-; Check outputs                                                                              ; Off        ; Off           ;
-; Report simulation coverage                                                                 ; On         ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
-; Display missing 1-value coverage report                                                    ; On         ; On            ;
-; Display missing 0-value coverage report                                                    ; On         ; On            ;
-; Detect setup and hold time violations                                                      ; Off        ; Off           ;
-; Detect glitches                                                                            ; Off        ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
-; Generate Signal Activity File                                                              ; Off        ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
-; Group bus channels in simulation results                                                   ; Off        ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Functional            ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; End time                                                                                   ; 100 ns                ;               ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; PCIncrementorTest.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
 
 
 +----------------------+
@@ -95,94 +95,210 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      16.67 % ;
-; Total nodes checked                                 ; 30           ;
-; Total output ports checked                          ; 30           ;
-; Total output ports with complete 1/0-value coverage ; 5            ;
-; Total output ports with no 1/0-value coverage       ; 23           ;
-; Total output ports with no 1-value coverage         ; 23           ;
-; Total output ports with no 0-value coverage         ; 25           ;
+; Total coverage as a percentage                      ;      32.04 % ;
+; Total nodes checked                                 ; 96           ;
+; Total output ports checked                          ; 103          ;
+; Total output ports with complete 1/0-value coverage ; 33           ;
+; Total output ports with no 1/0-value coverage       ; 66           ;
+; Total output ports with no 1-value coverage         ; 66           ;
+; Total output ports with no 0-value coverage         ; 70           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+----------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                        ;
-+----------------------------------------+----------------------------------------+------------------+
-; Node Name                              ; Output Port Name                       ; Output Port Type ;
-+----------------------------------------+----------------------------------------+------------------+
-; |Processor|clk2                        ; |Processor|clk2                        ; pin_out          ;
-; |Processor|clk                         ; |Processor|clk                         ; out              ;
-; |Processor|clk1                        ; |Processor|clk1                        ; pin_out          ;
-; |Processor|ClockSplitter:inst|clk1Temp ; |Processor|ClockSplitter:inst|clk1Temp ; regout           ;
-; |Processor|ClockSplitter:inst|clk2Temp ; |Processor|ClockSplitter:inst|clk2Temp ; regout           ;
-+----------------------------------------+----------------------------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                     ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |Processor|clk2                                                                                    ; |Processor|clk2                                                                                         ; pin_out          ;
+; |Processor|clk                                                                                     ; |Processor|clk                                                                                          ; out              ;
+; |Processor|clk1                                                                                    ; |Processor|clk1                                                                                         ; pin_out          ;
+; |Processor|outputPC[1]                                                                             ; |Processor|outputPC[1]                                                                                  ; pin_out          ;
+; |Processor|outputPC[0]                                                                             ; |Processor|outputPC[0]                                                                                  ; pin_out          ;
+; |Processor|ProgramCounter:inst1|tempPC[0]                                                          ; |Processor|ProgramCounter:inst1|tempPC[0]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[1]                                                          ; |Processor|ProgramCounter:inst1|tempPC[1]                                                               ; regout           ;
+; |Processor|ClockSplitter:inst|clk1Temp                                                             ; |Processor|ClockSplitter:inst|clk1Temp                                                                  ; regout           ;
+; |Processor|ClockSplitter:inst|clk2Temp                                                             ; |Processor|ClockSplitter:inst|clk2Temp                                                                  ; regout           ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[0]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[1]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[2]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[3]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~23                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~23                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~24                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~24                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~30                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~30                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~31                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~31                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+----------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                 ;
-+-------------------------------------------+-------------------------------------------+------------------+
-; Node Name                                 ; Output Port Name                          ; Output Port Type ;
-+-------------------------------------------+-------------------------------------------+------------------+
-; |Processor|reset                          ; |Processor|reset                          ; out              ;
-; |Processor|outputPC[7]                    ; |Processor|outputPC[7]                    ; pin_out          ;
-; |Processor|outputPC[6]                    ; |Processor|outputPC[6]                    ; pin_out          ;
-; |Processor|outputPC[5]                    ; |Processor|outputPC[5]                    ; pin_out          ;
-; |Processor|outputPC[4]                    ; |Processor|outputPC[4]                    ; pin_out          ;
-; |Processor|outputPC[3]                    ; |Processor|outputPC[3]                    ; pin_out          ;
-; |Processor|outputPC[2]                    ; |Processor|outputPC[2]                    ; pin_out          ;
-; |Processor|outputPC[1]                    ; |Processor|outputPC[1]                    ; pin_out          ;
-; |Processor|inputPC[7]                     ; |Processor|inputPC[7]                     ; out              ;
-; |Processor|inputPC[6]                     ; |Processor|inputPC[6]                     ; out              ;
-; |Processor|inputPC[5]                     ; |Processor|inputPC[5]                     ; out              ;
-; |Processor|inputPC[4]                     ; |Processor|inputPC[4]                     ; out              ;
-; |Processor|inputPC[3]                     ; |Processor|inputPC[3]                     ; out              ;
-; |Processor|inputPC[2]                     ; |Processor|inputPC[2]                     ; out              ;
-; |Processor|inputPC[1]                     ; |Processor|inputPC[1]                     ; out              ;
-; |Processor|inputPC[0]                     ; |Processor|inputPC[0]                     ; out              ;
-; |Processor|ProgramCounter:inst1|tempPC[1] ; |Processor|ProgramCounter:inst1|tempPC[1] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[2] ; |Processor|ProgramCounter:inst1|tempPC[2] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[3] ; |Processor|ProgramCounter:inst1|tempPC[3] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[4] ; |Processor|ProgramCounter:inst1|tempPC[4] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[5] ; |Processor|ProgramCounter:inst1|tempPC[5] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[6] ; |Processor|ProgramCounter:inst1|tempPC[6] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[7] ; |Processor|ProgramCounter:inst1|tempPC[7] ; regout           ;
-+-------------------------------------------+-------------------------------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |Processor|reset                                                                                   ; |Processor|reset                                                                                        ; out              ;
+; |Processor|outputPC[7]                                                                             ; |Processor|outputPC[7]                                                                                  ; pin_out          ;
+; |Processor|outputPC[6]                                                                             ; |Processor|outputPC[6]                                                                                  ; pin_out          ;
+; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
+; |Processor|outputPC[4]                                                                             ; |Processor|outputPC[4]                                                                                  ; pin_out          ;
+; |Processor|outputPC[3]                                                                             ; |Processor|outputPC[3]                                                                                  ; pin_out          ;
+; |Processor|ProgramCounter:inst1|tempPC[3]                                                          ; |Processor|ProgramCounter:inst1|tempPC[3]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[4]                                                          ; |Processor|ProgramCounter:inst1|tempPC[4]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[5]                                                          ; |Processor|ProgramCounter:inst1|tempPC[5]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[6]                                                          ; |Processor|ProgramCounter:inst1|tempPC[6]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[7]                                                          ; |Processor|ProgramCounter:inst1|tempPC[7]                                                               ; regout           ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[7]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[7]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                      ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                           ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[6]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[6]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[5]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[5]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~21                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~21                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~22                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~22                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~25                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~25                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~26                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~26                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~27                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~27                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~29                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~29                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                 ;
-+-------------------------------------------+-------------------------------------------+------------------+
-; Node Name                                 ; Output Port Name                          ; Output Port Type ;
-+-------------------------------------------+-------------------------------------------+------------------+
-; |Processor|reset                          ; |Processor|reset                          ; out              ;
-; |Processor|outputPC[7]                    ; |Processor|outputPC[7]                    ; pin_out          ;
-; |Processor|outputPC[6]                    ; |Processor|outputPC[6]                    ; pin_out          ;
-; |Processor|outputPC[5]                    ; |Processor|outputPC[5]                    ; pin_out          ;
-; |Processor|outputPC[4]                    ; |Processor|outputPC[4]                    ; pin_out          ;
-; |Processor|outputPC[3]                    ; |Processor|outputPC[3]                    ; pin_out          ;
-; |Processor|outputPC[2]                    ; |Processor|outputPC[2]                    ; pin_out          ;
-; |Processor|outputPC[1]                    ; |Processor|outputPC[1]                    ; pin_out          ;
-; |Processor|outputPC[0]                    ; |Processor|outputPC[0]                    ; pin_out          ;
-; |Processor|inputPC[7]                     ; |Processor|inputPC[7]                     ; out              ;
-; |Processor|inputPC[6]                     ; |Processor|inputPC[6]                     ; out              ;
-; |Processor|inputPC[5]                     ; |Processor|inputPC[5]                     ; out              ;
-; |Processor|inputPC[4]                     ; |Processor|inputPC[4]                     ; out              ;
-; |Processor|inputPC[3]                     ; |Processor|inputPC[3]                     ; out              ;
-; |Processor|inputPC[2]                     ; |Processor|inputPC[2]                     ; out              ;
-; |Processor|inputPC[1]                     ; |Processor|inputPC[1]                     ; out              ;
-; |Processor|inputPC[0]                     ; |Processor|inputPC[0]                     ; out              ;
-; |Processor|ProgramCounter:inst1|tempPC[0] ; |Processor|ProgramCounter:inst1|tempPC[0] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[1] ; |Processor|ProgramCounter:inst1|tempPC[1] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[2] ; |Processor|ProgramCounter:inst1|tempPC[2] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[3] ; |Processor|ProgramCounter:inst1|tempPC[3] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[4] ; |Processor|ProgramCounter:inst1|tempPC[4] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[5] ; |Processor|ProgramCounter:inst1|tempPC[5] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[6] ; |Processor|ProgramCounter:inst1|tempPC[6] ; regout           ;
-; |Processor|ProgramCounter:inst1|tempPC[7] ; |Processor|ProgramCounter:inst1|tempPC[7] ; regout           ;
-+-------------------------------------------+-------------------------------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |Processor|reset                                                                                   ; |Processor|reset                                                                                        ; out              ;
+; |Processor|outputPC[7]                                                                             ; |Processor|outputPC[7]                                                                                  ; pin_out          ;
+; |Processor|outputPC[6]                                                                             ; |Processor|outputPC[6]                                                                                  ; pin_out          ;
+; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
+; |Processor|outputPC[4]                                                                             ; |Processor|outputPC[4]                                                                                  ; pin_out          ;
+; |Processor|outputPC[3]                                                                             ; |Processor|outputPC[3]                                                                                  ; pin_out          ;
+; |Processor|outputPC[2]                                                                             ; |Processor|outputPC[2]                                                                                  ; pin_out          ;
+; |Processor|ProgramCounter:inst1|tempPC[2]                                                          ; |Processor|ProgramCounter:inst1|tempPC[2]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[3]                                                          ; |Processor|ProgramCounter:inst1|tempPC[3]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[4]                                                          ; |Processor|ProgramCounter:inst1|tempPC[4]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[5]                                                          ; |Processor|ProgramCounter:inst1|tempPC[5]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[6]                                                          ; |Processor|ProgramCounter:inst1|tempPC[6]                                                               ; regout           ;
+; |Processor|ProgramCounter:inst1|tempPC[7]                                                          ; |Processor|ProgramCounter:inst1|tempPC[7]                                                               ; regout           ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[7]                                     ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|result_node[7]                                          ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                      ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                           ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[7]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[6]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[6]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[5]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[5]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~21                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~21                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~22                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~22                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~25                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~25                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~26                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~26                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~27                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~27                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~29                                 ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|_~29                                      ; out0             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |Processor|PCIncrementor:inst2|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -198,19 +314,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 16:29:45 2013
+    Info: Processing started: Mon Dec 16 16:48:10 2013
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Processor -c Processor
-Info: Using vector source file "C:/Users/Nathan/SomethingWitty/Processor/PCTest.vwf"
+Info: Using vector source file "C:/Users/Tracy/Desktop/SomethingWitty/Processor/PCIncrementorTest.vwf"
 Info: Simulation end time 100.0 ns did not reach the end of the input vector, which ended at 1.0 us
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      16.67 %
-Info: Number of transitions in simulation is 62
+Info: Simulation coverage is      32.04 %
+Info: Number of transitions in simulation is 177
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 160 megabytes
-    Info: Processing ended: Mon Dec 16 16:29:45 2013
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Mon Dec 16 16:48:11 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

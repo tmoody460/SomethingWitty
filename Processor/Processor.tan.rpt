@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Processor
-Mon Dec 16 15:09:44 2013
+Mon Dec 16 16:08:30 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,8 +12,10 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Clock Settings Summary
   5. Parallel Compilation
   6. Clock Setup: 'clk'
-  7. tco
-  8. Timing Analyzer Messages
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
 
 
 
@@ -36,15 +38,17 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                  ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
-; Worst-case tco               ; N/A   ; None          ; 16.000 ns                                      ; ClockSplitter:inst|clk1Temp ; clk1                        ; clk        ; --       ; 0            ;
-; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; ClockSplitter:inst|clk1Temp ; ClockSplitter:inst|clk1Temp ; clk        ; clk      ; 0            ;
-; Total number of failed paths ;       ;               ;                                                ;                             ;                             ;            ;          ; 0            ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                        ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                           ; To                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.000 ns                                       ; inputPC[4]                     ; ProgramCounter:inst1|tempPC[4] ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 27.800 ns                                      ; ProgramCounter:inst1|tempPC[2] ; outputPC[2]                    ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 11.100 ns                                      ; inputPC[6]                     ; ProgramCounter:inst1|tempPC[6] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; ClockSplitter:inst|clk1Temp    ; ClockSplitter:inst|clk1Temp    ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                ;                                ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -109,14 +113,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; tco                                                                                 ;
-+-------+--------------+------------+-----------------------------+------+------------+
-; Slack ; Required tco ; Actual tco ; From                        ; To   ; From Clock ;
-+-------+--------------+------------+-----------------------------+------+------------+
-; N/A   ; None         ; 16.000 ns  ; ClockSplitter:inst|clk1Temp ; clk1 ; clk        ;
-; N/A   ; None         ; 15.800 ns  ; ClockSplitter:inst|clk2Temp ; clk2 ; clk        ;
-+-------+--------------+------------+-----------------------------+------+------------+
++--------------------------------------------------------------------------------------------+
+; tsu                                                                                        ;
++-------+--------------+------------+------------+--------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                             ; To Clock ;
++-------+--------------+------------+------------+--------------------------------+----------+
+; N/A   ; None         ; 1.000 ns   ; inputPC[4] ; ProgramCounter:inst1|tempPC[4] ; clk      ;
+; N/A   ; None         ; 0.800 ns   ; inputPC[3] ; ProgramCounter:inst1|tempPC[3] ; clk      ;
+; N/A   ; None         ; 0.600 ns   ; inputPC[0] ; ProgramCounter:inst1|tempPC[0] ; clk      ;
+; N/A   ; None         ; 0.200 ns   ; inputPC[2] ; ProgramCounter:inst1|tempPC[2] ; clk      ;
+; N/A   ; None         ; 0.100 ns   ; inputPC[1] ; ProgramCounter:inst1|tempPC[1] ; clk      ;
+; N/A   ; None         ; -4.900 ns  ; inputPC[7] ; ProgramCounter:inst1|tempPC[7] ; clk      ;
+; N/A   ; None         ; -5.300 ns  ; inputPC[5] ; ProgramCounter:inst1|tempPC[5] ; clk      ;
+; N/A   ; None         ; -5.400 ns  ; inputPC[6] ; ProgramCounter:inst1|tempPC[6] ; clk      ;
++-------+--------------+------------+------------+--------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------+
+; tco                                                                                           ;
++-------+--------------+------------+--------------------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From                           ; To          ; From Clock ;
++-------+--------------+------------+--------------------------------+-------------+------------+
+; N/A   ; None         ; 27.800 ns  ; ProgramCounter:inst1|tempPC[1] ; outputPC[1] ; clk        ;
+; N/A   ; None         ; 27.800 ns  ; ProgramCounter:inst1|tempPC[2] ; outputPC[2] ; clk        ;
+; N/A   ; None         ; 27.700 ns  ; ProgramCounter:inst1|tempPC[0] ; outputPC[0] ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; ProgramCounter:inst1|tempPC[3] ; outputPC[3] ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; ProgramCounter:inst1|tempPC[4] ; outputPC[4] ; clk        ;
+; N/A   ; None         ; 27.600 ns  ; ProgramCounter:inst1|tempPC[7] ; outputPC[7] ; clk        ;
+; N/A   ; None         ; 27.500 ns  ; ProgramCounter:inst1|tempPC[6] ; outputPC[6] ; clk        ;
+; N/A   ; None         ; 27.000 ns  ; ProgramCounter:inst1|tempPC[5] ; outputPC[5] ; clk        ;
+; N/A   ; None         ; 16.100 ns  ; ClockSplitter:inst|clk2Temp    ; clk2        ; clk        ;
+; N/A   ; None         ; 14.600 ns  ; ClockSplitter:inst|clk1Temp    ; clk1        ; clk        ;
++-------+--------------+------------+--------------------------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; th                                                                                               ;
++---------------+-------------+-----------+------------+--------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                             ; To Clock ;
++---------------+-------------+-----------+------------+--------------------------------+----------+
+; N/A           ; None        ; 11.100 ns ; inputPC[6] ; ProgramCounter:inst1|tempPC[6] ; clk      ;
+; N/A           ; None        ; 11.000 ns ; inputPC[5] ; ProgramCounter:inst1|tempPC[5] ; clk      ;
+; N/A           ; None        ; 10.600 ns ; inputPC[7] ; ProgramCounter:inst1|tempPC[7] ; clk      ;
+; N/A           ; None        ; 5.600 ns  ; inputPC[1] ; ProgramCounter:inst1|tempPC[1] ; clk      ;
+; N/A           ; None        ; 5.500 ns  ; inputPC[2] ; ProgramCounter:inst1|tempPC[2] ; clk      ;
+; N/A           ; None        ; 5.100 ns  ; inputPC[0] ; ProgramCounter:inst1|tempPC[0] ; clk      ;
+; N/A           ; None        ; 4.900 ns  ; inputPC[3] ; ProgramCounter:inst1|tempPC[3] ; clk      ;
+; N/A           ; None        ; 4.700 ns  ; inputPC[4] ; ProgramCounter:inst1|tempPC[4] ; clk      ;
++---------------+-------------+-----------+------------+--------------------------------+----------+
 
 
 +--------------------------+
@@ -125,48 +169,77 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 15:09:44 2013
+    Info: Processing started: Mon Dec 16 16:08:29 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Processor -c Processor
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "ClockSplitter:inst|clk1Temp" as buffer
 Info: Clock "clk" Internal fmax is restricted to 125.0 MHz between source register "ClockSplitter:inst|clk2Temp" and destination register "ClockSplitter:inst|clk2Temp"
     Info: fmax restricted to Clock High delay (4.0 ns) plus Clock Low delay (4.0 ns) : restricted to 8.0 ns. Expand message to see actual delay path.
         Info: + Longest register to register delay is 2.200 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_A50; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
-            Info: 2: + IC(0.500 ns) + CELL(1.700 ns) = 2.200 ns; Loc. = LC1_A50; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8_C28; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
+            Info: 2: + IC(0.500 ns) + CELL(1.700 ns) = 2.200 ns; Loc. = LC8_C28; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
             Info: Total cell delay = 1.700 ns ( 77.27 % )
             Info: Total interconnect delay = 0.500 ns ( 22.73 % )
         Info: - Smallest clock skew is 0.000 ns
             Info: + Shortest clock path from clock "clk" to destination register is 7.000 ns
                 Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 2; CLK Node = 'clk'
-                Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC1_A50; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
+                Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_C28; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
                 Info: Total cell delay = 2.900 ns ( 41.43 % )
                 Info: Total interconnect delay = 4.100 ns ( 58.57 % )
             Info: - Longest clock path from clock "clk" to source register is 7.000 ns
                 Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 2; CLK Node = 'clk'
-                Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC1_A50; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
+                Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_C28; Fanout = 2; REG Node = 'ClockSplitter:inst|clk2Temp'
                 Info: Total cell delay = 2.900 ns ( 41.43 % )
                 Info: Total interconnect delay = 4.100 ns ( 58.57 % )
         Info: + Micro clock to output delay of source is 1.400 ns
         Info: + Micro setup delay of destination is 2.600 ns
-Info: tco from clock "clk" to destination pin "clk1" through register "ClockSplitter:inst|clk1Temp" is 16.000 ns
-    Info: + Longest clock path from clock "clk" to source register is 7.000 ns
+Info: tsu for register "ProgramCounter:inst1|tempPC[4]" (data pin = "inputPC[4]", clock pin = "clk") is 1.000 ns
+    Info: + Longest pin to register delay is 17.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_17; Fanout = 1; PIN Node = 'inputPC[4]'
+        Info: 2: + IC(5.100 ns) + CELL(1.700 ns) = 17.100 ns; Loc. = LC1_B9; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[4]'
+        Info: Total cell delay = 12.000 ns ( 70.18 % )
+        Info: Total interconnect delay = 5.100 ns ( 29.82 % )
+    Info: + Micro setup delay of destination is 2.600 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 18.700 ns
         Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 2; CLK Node = 'clk'
-        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_C14; Fanout = 2; REG Node = 'ClockSplitter:inst|clk1Temp'
-        Info: Total cell delay = 2.900 ns ( 41.43 % )
-        Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_H43; Fanout = 10; REG Node = 'ClockSplitter:inst|clk1Temp'
+        Info: 3: + IC(10.300 ns) + CELL(0.000 ns) = 18.700 ns; Loc. = LC1_B9; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[4]'
+        Info: Total cell delay = 4.300 ns ( 22.99 % )
+        Info: Total interconnect delay = 14.400 ns ( 77.01 % )
+Info: tco from clock "clk" to destination pin "outputPC[1]" through register "ProgramCounter:inst1|tempPC[1]" is 27.800 ns
+    Info: + Longest clock path from clock "clk" to source register is 18.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_H43; Fanout = 10; REG Node = 'ClockSplitter:inst|clk1Temp'
+        Info: 3: + IC(10.300 ns) + CELL(0.000 ns) = 18.700 ns; Loc. = LC4_A25; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[1]'
+        Info: Total cell delay = 4.300 ns ( 22.99 % )
+        Info: Total interconnect delay = 14.400 ns ( 77.01 % )
     Info: + Micro clock to output delay of source is 1.400 ns
-    Info: + Longest register to pin delay is 7.600 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8_C14; Fanout = 2; REG Node = 'ClockSplitter:inst|clk1Temp'
-        Info: 2: + IC(2.600 ns) + CELL(5.000 ns) = 7.600 ns; Loc. = PIN_161; Fanout = 0; PIN Node = 'clk1'
-        Info: Total cell delay = 5.000 ns ( 65.79 % )
-        Info: Total interconnect delay = 2.600 ns ( 34.21 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 180 megabytes
-    Info: Processing ended: Mon Dec 16 15:09:44 2013
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: + Longest register to pin delay is 7.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC4_A25; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[1]'
+        Info: 2: + IC(2.700 ns) + CELL(5.000 ns) = 7.700 ns; Loc. = PIN_173; Fanout = 0; PIN Node = 'outputPC[1]'
+        Info: Total cell delay = 5.000 ns ( 64.94 % )
+        Info: Total interconnect delay = 2.700 ns ( 35.06 % )
+Info: th for register "ProgramCounter:inst1|tempPC[6]" (data pin = "inputPC[6]", clock pin = "clk") is 11.100 ns
+    Info: + Longest clock path from clock "clk" to destination register is 18.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_H43; Fanout = 10; REG Node = 'ClockSplitter:inst|clk1Temp'
+        Info: 3: + IC(10.300 ns) + CELL(0.000 ns) = 18.700 ns; Loc. = LC1_D2; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[6]'
+        Info: Total cell delay = 4.300 ns ( 22.99 % )
+        Info: Total interconnect delay = 14.400 ns ( 77.01 % )
+    Info: + Micro hold delay of destination is 3.100 ns
+    Info: - Shortest pin to register delay is 10.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_92; Fanout = 1; PIN Node = 'inputPC[6]'
+        Info: 2: + IC(6.100 ns) + CELL(1.700 ns) = 10.700 ns; Loc. = LC1_D2; Fanout = 1; REG Node = 'ProgramCounter:inst1|tempPC[6]'
+        Info: Total cell delay = 4.600 ns ( 42.99 % )
+        Info: Total interconnect delay = 6.100 ns ( 57.01 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Mon Dec 16 16:08:30 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

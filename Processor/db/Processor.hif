@@ -59,7 +59,7 @@ db|Processor.(0).cnf
 # case_insensitive
 # source_file
 Processor.bdf
-31fad74a2b66bd1fd51149d4c388b46
+96a6e3975b45556c532673f981ae878
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -68,6 +68,39 @@ AUTO
 # hierarchies {
 |
 }
+# macro_sequence
+
+# end
+# entity
+ProgramCounter
+# storage
+db|Processor.(2).cnf
+db|Processor.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ProgramCounter.vhd
+2ddbaf20368a47ac31eef18031d490
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ProgramCounter:inst1
+}
+# lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end

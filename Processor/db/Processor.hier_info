@@ -3,6 +3,22 @@ clk2 <= ClockSplitter:inst.clk2
 clk => ClockSplitter:inst.clk
 reset => ClockSplitter:inst.reset
 clk1 <= ClockSplitter:inst.clk1
+outputPC[0] <= ProgramCounter:inst1.outPC[0]
+outputPC[1] <= ProgramCounter:inst1.outPC[1]
+outputPC[2] <= ProgramCounter:inst1.outPC[2]
+outputPC[3] <= ProgramCounter:inst1.outPC[3]
+outputPC[4] <= ProgramCounter:inst1.outPC[4]
+outputPC[5] <= ProgramCounter:inst1.outPC[5]
+outputPC[6] <= ProgramCounter:inst1.outPC[6]
+outputPC[7] <= ProgramCounter:inst1.outPC[7]
+inputPC[0] => ProgramCounter:inst1.nextPC[0]
+inputPC[1] => ProgramCounter:inst1.nextPC[1]
+inputPC[2] => ProgramCounter:inst1.nextPC[2]
+inputPC[3] => ProgramCounter:inst1.nextPC[3]
+inputPC[4] => ProgramCounter:inst1.nextPC[4]
+inputPC[5] => ProgramCounter:inst1.nextPC[5]
+inputPC[6] => ProgramCounter:inst1.nextPC[6]
+inputPC[7] => ProgramCounter:inst1.nextPC[7]
 
 
 |Processor|ClockSplitter:inst
@@ -12,5 +28,32 @@ reset => clk1Temp.ACLR
 reset => clk2Temp.ACLR
 clk1 <= clk1Temp.DB_MAX_OUTPUT_PORT_TYPE
 clk2 <= clk2Temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ProgramCounter:inst1
+nextPC[0] => tempPC[0].DATAIN
+nextPC[1] => tempPC[1].DATAIN
+nextPC[2] => tempPC[2].DATAIN
+nextPC[3] => tempPC[3].DATAIN
+nextPC[4] => tempPC[4].DATAIN
+nextPC[5] => tempPC[5].DATAIN
+nextPC[6] => tempPC[6].DATAIN
+nextPC[7] => tempPC[7].DATAIN
+pcClock => tempPC[7].CLK
+pcClock => tempPC[6].CLK
+pcClock => tempPC[5].CLK
+pcClock => tempPC[4].CLK
+pcClock => tempPC[3].CLK
+pcClock => tempPC[2].CLK
+pcClock => tempPC[1].CLK
+pcClock => tempPC[0].CLK
+outPC[0] <= tempPC[0].DB_MAX_OUTPUT_PORT_TYPE
+outPC[1] <= tempPC[1].DB_MAX_OUTPUT_PORT_TYPE
+outPC[2] <= tempPC[2].DB_MAX_OUTPUT_PORT_TYPE
+outPC[3] <= tempPC[3].DB_MAX_OUTPUT_PORT_TYPE
+outPC[4] <= tempPC[4].DB_MAX_OUTPUT_PORT_TYPE
+outPC[5] <= tempPC[5].DB_MAX_OUTPUT_PORT_TYPE
+outPC[6] <= tempPC[6].DB_MAX_OUTPUT_PORT_TYPE
+outPC[7] <= tempPC[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

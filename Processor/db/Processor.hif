@@ -369,26 +369,6 @@ aec4ea1b78f4cda1c3effe18f1abbf63
 
 # end
 # entity
-Processor
-# storage
-db|Processor.(0).cnf
-db|Processor.(0).cnf
-# case_insensitive
-# source_file
-Processor.bdf
-c2b784e5d21bdbf94f9b99676fbb41
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 lpm_rom
 # storage
 db|Processor.(7).cnf
@@ -1036,6 +1016,92 @@ bd0e2f5e01c1bd360461dceb53d48
 # hierarchies {
 Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom
 }
+# macro_sequence
+
+# end
+# entity
+Decoder
+# storage
+db|Processor.(11).cnf
+db|Processor.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Decoder.vhd
+93e3a0bf5b6cdf1ee80c74a93aaee68
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Decoder:inst14
+}
+# lmf
+..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Processor
+# storage
+db|Processor.(0).cnf
+db|Processor.(0).cnf
+# case_insensitive
+# source_file
+Processor.bdf
+f5444db4457715a5a2b1f739821fa0db
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Control
+# storage
+db|Processor.(12).cnf
+db|Processor.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Control.vhd
+a2060d9f659c62edde16383617218a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Control:inst13
+}
+# lmf
+..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end

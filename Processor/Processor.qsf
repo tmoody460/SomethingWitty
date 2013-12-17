@@ -59,4 +59,6 @@ set_global_assignment -name QIP_FILE Rom.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE ROMTest.vwf
 set_global_assignment -name VHDL_FILE Decoder.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE DecoderTest.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE DecoderTest.vwf
+set_global_assignment -name VHDL_FILE Control.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ControlTest.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ControlTest.vwf

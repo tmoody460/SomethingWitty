@@ -1,5 +1,5 @@
 Simulator report for Processor
-Mon Dec 16 17:54:16 2013
+Mon Dec 16 18:24:35 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -46,42 +46,42 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 100.0 ns     ;
-; Simulation Netlist Size     ; 144 nodes    ;
-; Simulation Coverage         ;      43.71 % ;
-; Total Number of Transitions ; 289          ;
+; Simulation Netlist Size     ; 175 nodes    ;
+; Simulation Coverage         ;      50.00 % ;
+; Total Number of Transitions ; 361          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; FLEX10K      ;
 +-----------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                       ;
-+--------------------------------------------------------------------------------------------+-------------+---------------+
-; Option                                                                                     ; Setting     ; Default Value ;
-+--------------------------------------------------------------------------------------------+-------------+---------------+
-; Simulation mode                                                                            ; Functional  ; Timing        ;
-; Start time                                                                                 ; 0 ns        ; 0 ns          ;
-; End time                                                                                   ; 100 ns      ;               ;
-; Simulation results format                                                                  ; CVWF        ;               ;
-; Vector input source                                                                        ; ROMTest.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On          ; On            ;
-; Check outputs                                                                              ; Off         ; Off           ;
-; Report simulation coverage                                                                 ; On          ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On          ; On            ;
-; Display missing 1-value coverage report                                                    ; On          ; On            ;
-; Display missing 0-value coverage report                                                    ; On          ; On            ;
-; Detect setup and hold time violations                                                      ; Off         ; Off           ;
-; Detect glitches                                                                            ; Off         ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off         ; Off           ;
-; Generate Signal Activity File                                                              ; Off         ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off         ; Off           ;
-; Group bus channels in simulation results                                                   ; Off         ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On          ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE  ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off         ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off         ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto        ; Auto          ;
-+--------------------------------------------------------------------------------------------+-------------+---------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                           ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                                     ; Setting         ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Simulation mode                                                                            ; Functional      ; Timing        ;
+; Start time                                                                                 ; 0 ns            ; 0 ns          ;
+; End time                                                                                   ; 100 ns          ;               ;
+; Simulation results format                                                                  ; CVWF            ;               ;
+; Vector input source                                                                        ; DecoderTest.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On              ; On            ;
+; Check outputs                                                                              ; Off             ; Off           ;
+; Report simulation coverage                                                                 ; On              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On              ; On            ;
+; Display missing 1-value coverage report                                                    ; On              ; On            ;
+; Display missing 0-value coverage report                                                    ; On              ; On            ;
+; Detect setup and hold time violations                                                      ; Off             ; Off           ;
+; Detect glitches                                                                            ; Off             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off             ; Off           ;
+; Generate Signal Activity File                                                              ; Off             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto            ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
 
 
 +----------------------+
@@ -103,13 +103,13 @@ Please use Quartus II to view the memory report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      43.71 % ;
-; Total nodes checked                                 ; 144          ;
-; Total output ports checked                          ; 151          ;
-; Total output ports with complete 1/0-value coverage ; 66           ;
-; Total output ports with no 1/0-value coverage       ; 72           ;
-; Total output ports with no 1-value coverage         ; 72           ;
-; Total output ports with no 0-value coverage         ; 85           ;
+; Total coverage as a percentage                      ;      50.00 % ;
+; Total nodes checked                                 ; 175          ;
+; Total output ports checked                          ; 182          ;
+; Total output ports with complete 1/0-value coverage ; 91           ;
+; Total output ports with no 1/0-value coverage       ; 74           ;
+; Total output ports with no 1-value coverage         ; 74           ;
+; Total output ports with no 0-value coverage         ; 91           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -122,6 +122,23 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Processor|clk2                                                                                    ; |Processor|clk2                                                                                         ; pin_out          ;
 ; |Processor|clk                                                                                     ; |Processor|clk                                                                                          ; out              ;
 ; |Processor|clk1                                                                                    ; |Processor|clk1                                                                                         ; pin_out          ;
+; |Processor|aluCode[2]                                                                              ; |Processor|aluCode[2]                                                                                   ; pin_out          ;
+; |Processor|aluCode[1]                                                                              ; |Processor|aluCode[1]                                                                                   ; pin_out          ;
+; |Processor|aluCode[0]                                                                              ; |Processor|aluCode[0]                                                                                   ; pin_out          ;
+; |Processor|imm6[5]                                                                                 ; |Processor|imm6[5]                                                                                      ; pin_out          ;
+; |Processor|imm6[4]                                                                                 ; |Processor|imm6[4]                                                                                      ; pin_out          ;
+; |Processor|imm6[3]                                                                                 ; |Processor|imm6[3]                                                                                      ; pin_out          ;
+; |Processor|imm6[2]                                                                                 ; |Processor|imm6[2]                                                                                      ; pin_out          ;
+; |Processor|imm6[1]                                                                                 ; |Processor|imm6[1]                                                                                      ; pin_out          ;
+; |Processor|imm6[0]                                                                                 ; |Processor|imm6[0]                                                                                      ; pin_out          ;
+; |Processor|imm9[7]                                                                                 ; |Processor|imm9[7]                                                                                      ; pin_out          ;
+; |Processor|imm9[6]                                                                                 ; |Processor|imm9[6]                                                                                      ; pin_out          ;
+; |Processor|imm9[5]                                                                                 ; |Processor|imm9[5]                                                                                      ; pin_out          ;
+; |Processor|imm9[4]                                                                                 ; |Processor|imm9[4]                                                                                      ; pin_out          ;
+; |Processor|imm9[3]                                                                                 ; |Processor|imm9[3]                                                                                      ; pin_out          ;
+; |Processor|imm9[2]                                                                                 ; |Processor|imm9[2]                                                                                      ; pin_out          ;
+; |Processor|imm9[1]                                                                                 ; |Processor|imm9[1]                                                                                      ; pin_out          ;
+; |Processor|imm9[0]                                                                                 ; |Processor|imm9[0]                                                                                      ; pin_out          ;
 ; |Processor|instruction[14]                                                                         ; |Processor|instruction[14]                                                                              ; pin_out          ;
 ; |Processor|instruction[13]                                                                         ; |Processor|instruction[13]                                                                              ; pin_out          ;
 ; |Processor|instruction[12]                                                                         ; |Processor|instruction[12]                                                                              ; pin_out          ;
@@ -133,8 +150,16 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Processor|instruction[2]                                                                          ; |Processor|instruction[2]                                                                               ; pin_out          ;
 ; |Processor|instruction[1]                                                                          ; |Processor|instruction[1]                                                                               ; pin_out          ;
 ; |Processor|instruction[0]                                                                          ; |Processor|instruction[0]                                                                               ; pin_out          ;
+; |Processor|opCodeOut[2]                                                                            ; |Processor|opCodeOut[2]                                                                                 ; pin_out          ;
+; |Processor|opCodeOut[1]                                                                            ; |Processor|opCodeOut[1]                                                                                 ; pin_out          ;
+; |Processor|opCodeOut[0]                                                                            ; |Processor|opCodeOut[0]                                                                                 ; pin_out          ;
 ; |Processor|outputPC[1]                                                                             ; |Processor|outputPC[1]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[0]                                                                             ; |Processor|outputPC[0]                                                                                  ; pin_out          ;
+; |Processor|reg2[1]                                                                                 ; |Processor|reg2[1]                                                                                      ; pin_out          ;
+; |Processor|reg2[0]                                                                                 ; |Processor|reg2[0]                                                                                      ; pin_out          ;
+; |Processor|reg3[2]                                                                                 ; |Processor|reg3[2]                                                                                      ; pin_out          ;
+; |Processor|reg3[1]                                                                                 ; |Processor|reg3[1]                                                                                      ; pin_out          ;
+; |Processor|reg3[0]                                                                                 ; |Processor|reg3[0]                                                                                      ; pin_out          ;
 ; |Processor|ProgramCounter:inst1|tempPC[0]                                                          ; |Processor|ProgramCounter:inst1|tempPC[0]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[1]                                                          ; |Processor|ProgramCounter:inst1|tempPC[1]                                                               ; regout           ;
 ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[14]                                            ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|otri[14]                                                 ; out              ;
@@ -202,6 +227,8 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[4]                                                                             ; |Processor|outputPC[4]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[3]                                                                             ; |Processor|outputPC[3]                                                                                  ; pin_out          ;
+; |Processor|reg1[2]                                                                                 ; |Processor|reg1[2]                                                                                      ; pin_out          ;
+; |Processor|reg1[1]                                                                                 ; |Processor|reg1[1]                                                                                      ; pin_out          ;
 ; |Processor|ProgramCounter:inst1|tempPC[3]                                                          ; |Processor|ProgramCounter:inst1|tempPC[3]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[4]                                                          ; |Processor|ProgramCounter:inst1|tempPC[4]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[5]                                                          ; |Processor|ProgramCounter:inst1|tempPC[5]                                                               ; regout           ;
@@ -276,17 +303,23 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 ; |Processor|reset                                                                                   ; |Processor|reset                                                                                        ; out              ;
+; |Processor|imm9[8]                                                                                 ; |Processor|imm9[8]                                                                                      ; pin_out          ;
 ; |Processor|instruction[15]                                                                         ; |Processor|instruction[15]                                                                              ; pin_out          ;
 ; |Processor|instruction[11]                                                                         ; |Processor|instruction[11]                                                                              ; pin_out          ;
 ; |Processor|instruction[10]                                                                         ; |Processor|instruction[10]                                                                              ; pin_out          ;
 ; |Processor|instruction[9]                                                                          ; |Processor|instruction[9]                                                                               ; pin_out          ;
 ; |Processor|instruction[8]                                                                          ; |Processor|instruction[8]                                                                               ; pin_out          ;
+; |Processor|opCodeOut[3]                                                                            ; |Processor|opCodeOut[3]                                                                                 ; pin_out          ;
 ; |Processor|outputPC[7]                                                                             ; |Processor|outputPC[7]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[6]                                                                             ; |Processor|outputPC[6]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[5]                                                                             ; |Processor|outputPC[5]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[4]                                                                             ; |Processor|outputPC[4]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[3]                                                                             ; |Processor|outputPC[3]                                                                                  ; pin_out          ;
 ; |Processor|outputPC[2]                                                                             ; |Processor|outputPC[2]                                                                                  ; pin_out          ;
+; |Processor|reg1[2]                                                                                 ; |Processor|reg1[2]                                                                                      ; pin_out          ;
+; |Processor|reg1[1]                                                                                 ; |Processor|reg1[1]                                                                                      ; pin_out          ;
+; |Processor|reg1[0]                                                                                 ; |Processor|reg1[0]                                                                                      ; pin_out          ;
+; |Processor|reg2[2]                                                                                 ; |Processor|reg2[2]                                                                                      ; pin_out          ;
 ; |Processor|ProgramCounter:inst1|tempPC[2]                                                          ; |Processor|ProgramCounter:inst1|tempPC[2]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[3]                                                          ; |Processor|ProgramCounter:inst1|tempPC[3]                                                               ; regout           ;
 ; |Processor|ProgramCounter:inst1|tempPC[4]                                                          ; |Processor|ProgramCounter:inst1|tempPC[4]                                                               ; regout           ;
@@ -376,19 +409,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 17:54:16 2013
+    Info: Processing started: Mon Dec 16 18:24:35 2013
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Processor -c Processor
-Info: Using vector source file "C:/Users/Tracy/Desktop/SomethingWitty/Processor/ROMTest.vwf"
+Info: Using vector source file "C:/Users/Nathan/SomethingWitty/Processor/DecoderTest.vwf"
 Info: Simulation end time 100.0 ns did not reach the end of the input vector, which ended at 1.0 us
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      43.71 %
-Info: Number of transitions in simulation is 289
+Info: Simulation coverage is      50.00 %
+Info: Number of transitions in simulation is 361
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 156 megabytes
-    Info: Processing ended: Mon Dec 16 17:54:16 2013
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Mon Dec 16 18:24:36 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

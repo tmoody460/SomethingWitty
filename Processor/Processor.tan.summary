@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 55.300 ns
+Actual Time    : 74.600 ns
 From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
-To             : RegDst
+To             : aluOutput[6]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -15,12 +15,22 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
-From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
-To             : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
+Actual Time    : 43.67 MHz ( period = 22.900 ns )
+From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
+To             : ALU:inst19|tempOutput[6]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : ALU:inst19|tempOutput[0]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 56
 
 Type           : Total number of failed paths
 Slack          : 
@@ -30,7 +40,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 56
 
 --------------------------------------------------------------------------------------
 

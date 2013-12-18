@@ -68,3 +68,5 @@ set_global_assignment -name VHDL_FILE DeMux.vhd
 set_global_assignment -name VHDL_FILE EightBitCombiner.vhd
 set_global_assignment -name VHDL_FILE EightToOneMux.vhd
 set_global_assignment -name BDF_FILE RegisterFile.bdf
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name VHDL_FILE SignExtender.vhd

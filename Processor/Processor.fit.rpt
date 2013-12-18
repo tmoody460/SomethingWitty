@@ -1,5 +1,5 @@
 Fitter report for Processor
-Mon Dec 16 23:04:25 2013
+Wed Dec 18 14:46:48 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Mon Dec 16 23:04:25 2013        ;
+; Fitter Status         ; Successful - Wed Dec 18 14:46:48 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; Processor                                    ;
 ; Top-level Entity Name ; Processor                                    ;
@@ -856,7 +856,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Tracy/Desktop/SomethingWitty/Processor/Processor.pin.
+The pin-out file can be found in C:/Users/Nathan/SomethingWitty/Processor/Processor.pin.
 
 
 +-----------------+
@@ -865,7 +865,7 @@ The pin-out file can be found in C:/Users/Tracy/Desktop/SomethingWitty/Processor
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 23:04:20 2013
+    Info: Processing started: Wed Dec 18 14:46:42 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Processor -c Processor
 Info: Selected device EPF10K70RC240-4 for design "Processor"
 Info: Fitter is using the Classic Timing Analyzer
@@ -875,7 +875,7 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 32 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Mon Dec 16 2013 at 23:04:21
+Info: Started fitting attempt 1 on Wed Dec 18 2013 at 14:46:43
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -883,9 +883,9 @@ Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 222 megabytes
-    Info: Processing ended: Mon Dec 16 23:04:25 2013
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Wed Dec 18 14:46:48 2013
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

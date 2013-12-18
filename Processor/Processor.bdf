@@ -665,7 +665,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1712 504 1824 592)
 	(text "BUSMUX" (rect 28 0 91 16)(font "Arial" (font_size 10)))
-	(text "inst9" (rect 3 77 26 89)(font "Arial" ))
+	(text "inst12" (rect 3 77 32 89)(font "Arial" ))
 	(port
 		(pt 0 64)
 		(input)
@@ -694,6 +694,12 @@ applicable agreement for further details.
 		(text "result[]" (rect 75 35 113 49)(font "Arial" (font_size 8)))
 		(line (pt 68 48)(pt 112 48)(line_width 3))
 	)
+	(parameter
+		"WIDTH"
+		"3"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+		(type "PARAMETER_UNKNOWN")	)
 	(drawing
 		(text "0" (rect 52 31 56 41)(font "Arial" (font_size 6)))
 		(text "1" (rect 52 55 56 65)(font "Arial" (font_size 6)))
@@ -702,23 +708,24 @@ applicable agreement for further details.
 		(line (pt 44 16)(pt 68 32)(line_width 1))
 		(line (pt 44 80)(pt 68 64)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 1696 432 1816 464))
 )
 (symbol
-	(rect 1936 440 2160 600)
+	(rect 1936 440 2168 600)
 	(text "RegisterFile" (rect 5 0 71 14)(font "Arial" (font_size 8)))
-	(text "inst10" (rect 8 144 37 156)(font "Arial" ))
+	(text "inst18" (rect 8 144 37 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "readReg2[2..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
-		(text "readReg2[2..0]" (rect 21 27 104 41)(font "Arial" (font_size 8)))
+		(text "readReg1Id[2..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "readReg1Id[2..0]" (rect 21 27 114 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "readReg1[2..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
-		(text "readReg1[2..0]" (rect 21 43 104 57)(font "Arial" (font_size 8)))
+		(text "readReg2Id[2..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "readReg2Id[2..0]" (rect 21 43 114 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
@@ -757,21 +764,21 @@ applicable agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
-		(pt 224 32)
+		(pt 232 32)
 		(output)
 		(text "readReg1[7..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
-		(text "readReg1[7..0]" (rect 120 27 203 41)(font "Arial" (font_size 8)))
-		(line (pt 224 32)(pt 208 32)(line_width 3))
+		(text "readReg1[7..0]" (rect 128 27 211 41)(font "Arial" (font_size 8)))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
-		(pt 224 48)
+		(pt 232 48)
 		(output)
 		(text "readReg2[7..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
-		(text "readReg2[7..0]" (rect 120 43 203 57)(font "Arial" (font_size 8)))
-		(line (pt 224 48)(pt 208 48)(line_width 3))
+		(text "readReg2[7..0]" (rect 128 43 211 57)(font "Arial" (font_size 8)))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 208 144)(line_width 1))
+		(rectangle (rect 16 16 216 144)(line_width 1))
 	)
 )
 (connector
@@ -938,10 +945,6 @@ applicable agreement for further details.
 (connector
 	(pt 1704 128)
 	(pt 1768 128)
-)
-(connector
-	(pt 1704 144)
-	(pt 1768 144)
 )
 (connector
 	(pt 1520 64)
@@ -1151,13 +1154,41 @@ applicable agreement for further details.
 	(pt 1936 568)
 )
 (connector
-	(pt 2160 472)
-	(pt 2184 472)
+	(pt 1720 144)
+	(pt 1720 344)
+)
+(connector
+	(pt 1720 344)
+	(pt 1880 344)
+)
+(connector
+	(pt 1704 144)
+	(pt 1720 144)
+)
+(connector
+	(pt 1720 144)
+	(pt 1768 144)
+)
+(connector
+	(pt 1880 344)
+	(pt 1880 640)
+)
+(connector
+	(pt 1880 640)
+	(pt 1768 640)
+)
+(connector
+	(pt 1768 640)
+	(pt 1768 592)
+)
+(connector
+	(pt 2168 488)
+	(pt 2184 488)
 	(bus)
 )
 (connector
-	(pt 2160 488)
-	(pt 2184 488)
+	(pt 2168 472)
+	(pt 2184 472)
 	(bus)
 )
 (junction (pt 416 304))
@@ -1173,3 +1204,4 @@ applicable agreement for further details.
 (junction (pt 416 320))
 (junction (pt 280 320))
 (junction (pt 1736 160))
+(junction (pt 1720 144))

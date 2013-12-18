@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Mon Dec 16 23:04:19 2013
+Wed Dec 18 17:31:04 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -13,12 +13,17 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. Analysis & Synthesis RAM Summary
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Source assignments for ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
- 11. Parameter Settings for User Entity Instance: Rom:inst3|lpm_rom:lpm_rom_component
- 12. Parameter Settings for Inferred Entity Instance: ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
- 13. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Source assignments for ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
+ 12. Source assignments for ALU:inst19|lpm_add_sub:Add1|addcore:adder
+ 13. Parameter Settings for User Entity Instance: Rom:inst3|lpm_rom:lpm_rom_component
+ 14. Parameter Settings for User Entity Instance: BUSMUX:inst12
+ 15. Parameter Settings for User Entity Instance: BUSMUX:inst23
+ 16. Parameter Settings for Inferred Entity Instance: ProgramCounter:inst1|lpm_counter:tempPC_rtl_0
+ 17. Parameter Settings for Inferred Entity Instance: ALU:inst19|lpm_add_sub:Add1
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +49,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 16 23:04:18 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 17:31:04 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; Processor                                    ;
 ; Top-level Entity Name       ; Processor                                    ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 19                                           ;
-; Total pins                  ; 69                                           ;
+; Total logic elements        ; 54                                           ;
+; Total pins                  ; 104                                          ;
 ; Total memory bits           ; 4,096                                        ;
 +-----------------------------+----------------------------------------------+
 
@@ -122,13 +127,20 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
-; Processor.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/Processor.bdf           ;
-; ClockSplitter.vhd                ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/ClockSplitter.vhd       ;
-; ProgramCounter.vhd               ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/ProgramCounter.vhd      ;
-; PCIncrementor.vhd                ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/PCIncrementor.vhd       ;
-; Rom.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/Rom.vhd                 ;
-; Decoder.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/Decoder.vhd             ;
-; Control.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/Control.vhd             ;
+; Processor.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Nathan/SomethingWitty/Processor/Processor.bdf                  ;
+; ClockSplitter.vhd                ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/ClockSplitter.vhd              ;
+; ProgramCounter.vhd               ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/ProgramCounter.vhd             ;
+; PCIncrementor.vhd                ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/PCIncrementor.vhd              ;
+; Rom.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/Nathan/SomethingWitty/Processor/Rom.vhd                        ;
+; Decoder.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/Decoder.vhd                    ;
+; Control.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/Control.vhd                    ;
+; EightBitSplitter.vhd             ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/EightBitSplitter.vhd           ;
+; DeMux.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/DeMux.vhd                      ;
+; EightBitCombiner.vhd             ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/EightBitCombiner.vhd           ;
+; EightToOneMux.vhd                ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/EightToOneMux.vhd              ;
+; RegisterFile.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Nathan/SomethingWitty/Processor/RegisterFile.bdf               ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/ALU.vhd                        ;
+; SignExtender.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Nathan/SomethingWitty/Processor/SignExtender.vhd               ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf             ;
 ; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc              ;
 ; aglobal90.inc                    ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
@@ -138,6 +150,14 @@ applicable agreement for further details.
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc             ;
 ; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc            ;
 ; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc          ;
+; 8dffe.bdf                        ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf             ;
+; BUSMUX.tdf                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/BUSMUX.tdf              ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.tdf             ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc              ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc            ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc            ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf            ;
+; muxlut.tdf                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf              ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc        ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
@@ -151,30 +171,38 @@ applicable agreement for further details.
 ; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
 ; alt_counter_f10ke.tdf            ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf   ;
 ; flex10ke_lcell.inc               ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc      ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
+; addcore.inc                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc             ;
+; look_add.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc            ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
+; addcore.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf             ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc         ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf         ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                      ;
-+-----------------------------------+----------------------------------------------------------------------------------------------+
-; Resource                          ; Usage                                                                                        ;
-+-----------------------------------+----------------------------------------------------------------------------------------------+
-; Total logic elements              ; 19                                                                                           ;
-; Total combinational functions     ; 19                                                                                           ;
-;     -- Total 4-input functions    ; 6                                                                                            ;
-;     -- Total 3-input functions    ; 3                                                                                            ;
-;     -- Total 2-input functions    ; 0                                                                                            ;
-;     -- Total 1-input functions    ; 2                                                                                            ;
-;     -- Total 0-input functions    ; 8                                                                                            ;
-; Total registers                   ; 10                                                                                           ;
-; Total logic cells in carry chains ; 8                                                                                            ;
-; I/O pins                          ; 69                                                                                           ;
-; Total memory bits                 ; 4096                                                                                         ;
-; Maximum fan-out node              ; ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6] ;
-; Maximum fan-out                   ; 18                                                                                           ;
-; Total fan-out                     ; 249                                                                                          ;
-; Average fan-out                   ; 2.39                                                                                         ;
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                               ;
++-----------------------------------+-------------------------------------------------------+
+; Resource                          ; Usage                                                 ;
++-----------------------------------+-------------------------------------------------------+
+; Total logic elements              ; 54                                                    ;
+; Total combinational functions     ; 54                                                    ;
+;     -- Total 4-input functions    ; 15                                                    ;
+;     -- Total 3-input functions    ; 21                                                    ;
+;     -- Total 2-input functions    ; 8                                                     ;
+;     -- Total 1-input functions    ; 2                                                     ;
+;     -- Total 0-input functions    ; 8                                                     ;
+; Total registers                   ; 10                                                    ;
+; Total logic cells in carry chains ; 16                                                    ;
+; I/O pins                          ; 104                                                   ;
+; Total memory bits                 ; 4096                                                  ;
+; Maximum fan-out node              ; Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|q[13] ;
+; Maximum fan-out                   ; 18                                                    ;
+; Total fan-out                     ; 372                                                   ;
+; Average fan-out                   ; 2.14                                                  ;
++-----------------------------------+-------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -182,15 +210,26 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
-; |Processor                                ; 19 (0)      ; 10           ; 4096        ; 69   ; 9 (0)        ; 0 (0)             ; 10 (0)           ; 8 (0)           ; 0 (0)      ; |Processor                                                                              ; work         ;
+; |Processor                                ; 54 (0)      ; 10           ; 4096        ; 104  ; 44 (0)       ; 0 (0)             ; 10 (0)           ; 16 (0)          ; 0 (0)      ; |Processor                                                                              ; work         ;
+;    |ALU:inst19|                           ; 31 (23)     ; 0            ; 0           ; 0    ; 31 (23)      ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ALU:inst19                                                                   ; work         ;
+;       |lpm_add_sub:Add1|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ALU:inst19|lpm_add_sub:Add1                                                  ; work         ;
+;          |addcore:adder|                  ; 8 (2)       ; 0            ; 0           ; 0    ; 8 (2)        ; 0 (0)             ; 0 (0)            ; 8 (2)           ; 0 (0)      ; |Processor|ALU:inst19|lpm_add_sub:Add1|addcore:adder                                    ; work         ;
+;             |a_csnbuffer:result_node|     ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |Processor|ALU:inst19|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node            ; work         ;
 ;    |ClockSplitter:inst|                   ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Processor|ClockSplitter:inst                                                           ; work         ;
-;    |Control:inst13|                       ; 9 (9)       ; 0            ; 0           ; 0    ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Control:inst13                                                               ; work         ;
+;    |Control:inst13|                       ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Control:inst13                                                               ; work         ;
 ;    |ProgramCounter:inst1|                 ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1                                                         ; work         ;
 ;       |lpm_counter:tempPC_rtl_0|          ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1|lpm_counter:tempPC_rtl_0                                ; work         ;
 ;          |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |Processor|ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
 ;    |Rom:inst3|                            ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3                                                                    ; work         ;
 ;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component                                          ; work         ;
 ;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom                              ; work         ;
+;    |busmux:inst23|                        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23                                                                ; work         ;
+;       |lpm_mux:$00000|                    ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000                                                 ; work         ;
+;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00011                                   ; work         ;
+;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00013                                   ; work         ;
+;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00015                                   ; work         ;
+;          |muxlut:$00017|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00017                                   ; work         ;
+;          |muxlut:$00019|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00019                                   ; work         ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -202,6 +241,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+------+--------------+--------------+--------------+--------------+------+---------------+
 ; Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom|content ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; ../output.mif ;
 +---------------------------------------------------------+------+--------------+--------------+--------------+--------------+------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------+------------------------+
+; ALU:inst19|tempOutput[0]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[1]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[2]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[3]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[4]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[5]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[6]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; ALU:inst19|tempOutput[7]                           ; ALU:inst19|tempOutput[7]~53 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                             ;                        ;
++----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -240,6 +297,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+-------+------+---------------------------+
 
 
++------------------------------------------------------------------+
+; Source assignments for ALU:inst19|lpm_add_sub:Add1|addcore:adder ;
++---------------------------+-------+------+-----------------------+
+; Assignment                ; Value ; From ; To                    ;
++---------------------------+-------+------+-----------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
++---------------------------+-------+------+-----------------------+
+
+
 +----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Rom:inst3|lpm_rom:lpm_rom_component ;
 +------------------------+---------------+-----------------------------------------+
@@ -257,6 +323,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                            ;
 ; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                          ;
 +------------------------+---------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst12 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 3     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst23 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 8     ; Untyped                           ;
++----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -287,13 +373,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:inst19|lpm_add_sub:Add1 ;
++------------------------+-------------+---------------------------------------+
+; Parameter Name         ; Value       ; Type                                  ;
++------------------------+-------------+---------------------------------------+
+; LPM_WIDTH              ; 7           ; Untyped                               ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
+; LPM_PIPELINE           ; 0           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
+; REGISTERED_AT_END      ; 0           ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                               ;
+; USE_WYS                ; OFF         ; Untyped                               ;
+; STYLE                  ; FAST        ; Untyped                               ;
+; CBXI_PARAMETER         ; add_sub_cui ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
++------------------------+-------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 23:04:13 2013
+    Info: Processing started: Wed Dec 18 17:30:59 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Info: Found 1 design units, including 1 entities, in source file Processor.bdf
     Info: Found entity 1: Processor
@@ -318,6 +432,26 @@ Info: Found 2 design units, including 1 entities, in source file Decoder.vhd
 Info: Found 2 design units, including 1 entities, in source file Control.vhd
     Info: Found design unit 1: Control-behavior
     Info: Found entity 1: Control
+Info: Found 2 design units, including 1 entities, in source file EightBitSplitter.vhd
+    Info: Found design unit 1: EightBitSplitter-behavior
+    Info: Found entity 1: EightBitSplitter
+Info: Found 2 design units, including 1 entities, in source file DeMux.vhd
+    Info: Found design unit 1: DeMux-behavior
+    Info: Found entity 1: DeMux
+Info: Found 2 design units, including 1 entities, in source file EightBitCombiner.vhd
+    Info: Found design unit 1: EightBitCombiner-behavior
+    Info: Found entity 1: EightBitCombiner
+Info: Found 2 design units, including 1 entities, in source file EightToOneMux.vhd
+    Info: Found design unit 1: EightToOneMux-behavior
+    Info: Found entity 1: EightToOneMux
+Info: Found 1 design units, including 1 entities, in source file RegisterFile.bdf
+    Info: Found entity 1: RegisterFile
+Info: Found 2 design units, including 1 entities, in source file ALU.vhd
+    Info: Found design unit 1: ALU-behavior
+    Info: Found entity 1: ALU
+Info: Found 2 design units, including 1 entities, in source file SignExtender.vhd
+    Info: Found design unit 1: SignExtender-behavior
+    Info: Found entity 1: SignExtender
 Info: Elaborating entity "Processor" for the top level hierarchy
 Info: Elaborating entity "ClockSplitter" for hierarchy "ClockSplitter:inst"
 Info: Elaborating entity "Control" for hierarchy "Control:inst13"
@@ -337,14 +471,78 @@ Info: Elaborating entity "altrom" for hierarchy "Rom:inst3|lpm_rom:lpm_rom_compo
 Info: Elaborated megafunction instantiation "Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom", which is child of megafunction instantiation "Rom:inst3|lpm_rom:lpm_rom_component"
 Info: Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:inst1"
 Info: Elaborating entity "PCIncrementor" for hierarchy "PCIncrementor:inst2"
+Info: Elaborating entity "ALU" for hierarchy "ALU:inst19"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "tempOutput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(52): signal "tempOutput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(60): signal "tempOutput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(23): inferring latch(es) for signal or variable "tempOutput", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(23): inferring latch(es) for signal or variable "tempOverflow", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "tempOverflow" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[0]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[1]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[2]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[3]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[4]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[5]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[6]" at ALU.vhd(23)
+Info (10041): Inferred latch for "tempOutput[7]" at ALU.vhd(23)
+Info: Elaborating entity "RegisterFile" for hierarchy "RegisterFile:inst18"
+Info: Elaborating entity "EightToOneMux" for hierarchy "RegisterFile:inst18|EightToOneMux:inst29"
+Warning (10541): VHDL Signal Declaration warning at EightToOneMux.vhd(16): used implicit default value for signal "readReg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at EightToOneMux.vhd(21): object "tempReadReg" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(26): signal "reg0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(28): signal "reg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(30): signal "reg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(32): signal "reg3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(34): signal "reg4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(36): signal "reg5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(38): signal "reg6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EightToOneMux.vhd(40): signal "reg7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "EightBitCombiner" for hierarchy "RegisterFile:inst18|EightBitCombiner:inst21"
+Info: Elaborating entity "8dffe" for hierarchy "RegisterFile:inst18|8dffe:inst"
+Info: Elaborated megafunction instantiation "RegisterFile:inst18|8dffe:inst"
+Info: Elaborating entity "EightBitSplitter" for hierarchy "RegisterFile:inst18|EightBitSplitter:inst16"
+Info: Elaborating entity "DeMux" for hierarchy "RegisterFile:inst18|DeMux:inst18"
+Info: Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst12"
+Info: Elaborated megafunction instantiation "BUSMUX:inst12"
+Info: Instantiated megafunction "BUSMUX:inst12" with the following parameter:
+    Info: Parameter "WIDTH" = "3"
+Info: Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst12|lpm_mux:$00000"
+Info: Elaborated megafunction instantiation "BUSMUX:inst12|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst12"
+Info: Elaborating entity "altshift" for hierarchy "BUSMUX:inst12|lpm_mux:$00000|altshift:external_latency_ffs"
+Info: Elaborated megafunction instantiation "BUSMUX:inst12|lpm_mux:$00000|altshift:external_latency_ffs", which is child of megafunction instantiation "BUSMUX:inst12"
+Info: Elaborating entity "muxlut" for hierarchy "BUSMUX:inst12|lpm_mux:$00000|muxlut:$00009"
+Info: Elaborated megafunction instantiation "BUSMUX:inst12|lpm_mux:$00000|muxlut:$00009", which is child of megafunction instantiation "BUSMUX:inst12"
+Info: Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst23"
+Info: Elaborated megafunction instantiation "BUSMUX:inst23"
+Info: Instantiated megafunction "BUSMUX:inst23" with the following parameter:
+    Info: Parameter "WIDTH" = "8"
+Info: Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst23|lpm_mux:$00000"
+Info: Elaborated megafunction instantiation "BUSMUX:inst23|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst23"
+Info: Elaborating entity "altshift" for hierarchy "BUSMUX:inst23|lpm_mux:$00000|altshift:external_latency_ffs"
+Info: Elaborated megafunction instantiation "BUSMUX:inst23|lpm_mux:$00000|altshift:external_latency_ffs", which is child of megafunction instantiation "BUSMUX:inst23"
+Info: Elaborating entity "SignExtender" for hierarchy "SignExtender:inst24"
 Info: Inferred 1 megafunctions from design logic
     Info: Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "ProgramCounter:inst1|tempPC[0]~0"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst19|Add1"
 Info: Elaborated megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0"
 Info: Instantiated megafunction "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "8"
     Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
 Info: Elaborated megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "ProgramCounter:inst1|lpm_counter:tempPC_rtl_0"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
+Info: Instantiated megafunction "ALU:inst19|lpm_add_sub:Add1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1|addcore:adder", which is child of megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
+Info: Elaborated megafunction instantiation "ALU:inst19|lpm_add_sub:Add1|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "ALU:inst19|lpm_add_sub:Add1"
 Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "instruction[13]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "opCodeOut[1]" into a wire
@@ -369,12 +567,15 @@ Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "instruction[5]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "imm6[5]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "imm9[5]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "reg3[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "instruction[4]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "imm6[4]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "imm9[4]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "reg3[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "instruction[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "imm6[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "imm9[3]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "reg3[0]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[8]" to the node "instruction[8]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[8]" to the node "imm9[8]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[7]" to the node "instruction[7]" into a wire
@@ -384,12 +585,9 @@ Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[11]" to the node "instruction[11]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[10]" to the node "instruction[10]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[9]" to the node "instruction[9]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[2]" to the node "Control:inst13|ALUOp[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[1]" to the node "Control:inst13|ALUOp[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[0]" to the node "Control:inst13|tempALUOp" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "reg3[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "reg3[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "reg3[0]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "busmux:inst23|lpm_mux:$00000|muxlut:$00019|result_node" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "busmux:inst23|lpm_mux:$00000|muxlut:$00017|result_node" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "busmux:inst23|lpm_mux:$00000|muxlut:$00015|result_node" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[8]" to the node "reg2[2]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[7]" to the node "reg2[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[6]" to the node "reg2[0]" into a wire
@@ -401,14 +599,61 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[15]" to the node "Control:inst13|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[14]" to the node "Control:inst13|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[12]" to the node "Control:inst13|MemWrite" into an OR gate
-Info: Implemented 104 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
-    Info: Implemented 67 output pins
-    Info: Implemented 19 logic cells
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[2]" to the node "Control:inst13|ALUOp[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[1]" to the node "Control:inst13|ALUOp[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[0]" to the node "Control:inst13|tempALUOp" into an OR gate
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "ALU:inst19|tempOutput[7]" merged with LATCH primitive "ALU:inst19|tempOutput[6]"
+Warning: Latch ALU:inst19|tempOutput[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Latch ALU:inst19|tempOutput[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst19|process_0~0
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "overflowFlag" is stuck at GND
+    Warning (13410): Pin "readReg1[7]" is stuck at GND
+    Warning (13410): Pin "readReg1[6]" is stuck at GND
+    Warning (13410): Pin "readReg1[5]" is stuck at GND
+    Warning (13410): Pin "readReg1[4]" is stuck at GND
+    Warning (13410): Pin "readReg1[3]" is stuck at GND
+    Warning (13410): Pin "readReg1[2]" is stuck at GND
+    Warning (13410): Pin "readReg1[1]" is stuck at GND
+    Warning (13410): Pin "readReg1[0]" is stuck at GND
+    Warning (13410): Pin "readReg2[7]" is stuck at GND
+    Warning (13410): Pin "readReg2[6]" is stuck at GND
+    Warning (13410): Pin "readReg2[5]" is stuck at GND
+    Warning (13410): Pin "readReg2[4]" is stuck at GND
+    Warning (13410): Pin "readReg2[3]" is stuck at GND
+    Warning (13410): Pin "readReg2[2]" is stuck at GND
+    Warning (13410): Pin "readReg2[1]" is stuck at GND
+    Warning (13410): Pin "readReg2[0]" is stuck at GND
+Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
+Warning: Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "toWrite[7]"
+    Warning (15610): No output dependent on input pin "toWrite[6]"
+    Warning (15610): No output dependent on input pin "toWrite[5]"
+    Warning (15610): No output dependent on input pin "toWrite[4]"
+    Warning (15610): No output dependent on input pin "toWrite[3]"
+    Warning (15610): No output dependent on input pin "toWrite[2]"
+    Warning (15610): No output dependent on input pin "toWrite[1]"
+    Warning (15610): No output dependent on input pin "toWrite[0]"
+Info: Implemented 174 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 94 output pins
+    Info: Implemented 54 logic cells
     Info: Implemented 16 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 230 megabytes
-    Info: Processing ended: Mon Dec 16 23:04:19 2013
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 115 warnings
+    Info: Peak virtual memory: 249 megabytes
+    Info: Processing ended: Wed Dec 18 17:31:05 2013
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Processor">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Processor|PCIncrementor:inst2|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_fnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Processor|ALU:inst19|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_cui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Processor|BUSMUX:inst12|lpm_mux:$00000" CBX_FILE_NAME="mux_jbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Processor|BUSMUX:inst23|lpm_mux:$00000" CBX_FILE_NAME="mux_obc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

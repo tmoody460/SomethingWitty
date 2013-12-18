@@ -5,3 +5,6 @@ C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.pd
 C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.csprojResolveAssemblyReference.cache
 C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.exe
 C:\Users\Tracy\Desktop\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.pdb
+C:\Users\Nathan\SomethingWitty\Assembler\Assembler\bin\Debug\Assembler.exe.config
+C:\Users\Nathan\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.exe
+C:\Users\Nathan\SomethingWitty\Assembler\Assembler\obj\Debug\Assembler.pdb

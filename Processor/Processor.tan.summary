@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 109.900 ns
-From           : ALU:inst42|varOutput[7]
-To             : overflowFlag
+Actual Time    : 99.900 ns
+From           : ALU:inst42|varOutput[4]
+To             : zeroFlag
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.35 MHz ( period = 157.600 ns )
-From           : ALU:inst42|varOutput[6]
-To             : RegisterFile:inst4|8dffe:inst3|30
+Actual Time    : 6.54 MHz ( period = 153.000 ns )
+From           : ALU:inst42|varOutput[0]
+To             : RegisterFile:inst4|8dffe:inst6|36
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -26,8 +26,8 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : RegisterFile:inst4|8dffe:inst3|29
-To             : ALU:inst42|varOutput[7]
+From           : RegisterFile:inst4|8dffe:inst3|30
+To             : ALU:inst42|varOutput[6]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 512

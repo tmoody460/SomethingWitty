@@ -46,7 +46,7 @@ namespace Assembler
 
         private static void checkAssemblyIsValid(StreamReader reader, Dictionary<string, string> opCodes)
         {
-            int lineNumber = 0;
+            int lineNumber = 1;
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
@@ -237,7 +237,7 @@ namespace Assembler
         private static Dictionary<string, int> makeLabelTable(StreamReader reader)
         {
             Dictionary<string, int> labelTable = new Dictionary<string, int>();
-            int lineNumber = 0;
+            int lineNumber = 1;
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
@@ -334,12 +334,13 @@ namespace Assembler
             writer.WriteLine("CONTENT");
             writer.WriteLine("\tBEGIN");
             writer.WriteLine("\t[0..255]\t:\t0000000000000000;");
+            writer.WriteLine("\t0\t\t\t:\t0000000000000000;");
 
 
             Dictionary<string, string> opCodes = makeOpCodeDictionary();
             Dictionary<string, string> aluCodes = makeALUCodeDictionary();
 
-            int lineNumber = 0;
+            int lineNumber = 1;
 
             while (!reader.EndOfStream)
             {
@@ -347,7 +348,7 @@ namespace Assembler
                 string[] parts = line.Split(new char[] { ',', ' ', '\t', ')', '(' }, StringSplitOptions.RemoveEmptyEntries);
                 int startingIndex = parts[0].Last() == ':' ? 1 : 0;
 
-                writer.Write("\t" + lineNumber + "\t\t\t:\t");
+                writer.Write("\t" + (lineNumber) + "\t\t\t:\t");
                 string opCode = opCodes[parts[startingIndex]];
                 writer.Write(opCode);
 

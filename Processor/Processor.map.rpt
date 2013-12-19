@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Thu Dec 19 02:56:40 2013
+Thu Dec 19 04:06:11 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -56,12 +56,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Dec 19 02:56:40 2013        ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 19 04:06:11 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; Processor                                    ;
 ; Top-level Entity Name       ; Processor                                    ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 392                                          ;
+; Total logic elements        ; 398                                          ;
 ; Total pins                  ; 124                                          ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
@@ -152,6 +152,7 @@ applicable agreement for further details.
 ; RAM.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/RAM.vhd                 ;
 ; JRDetector.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/JRDetector.vhd          ;
 ; JumpDetector.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/JumpDetector.vhd        ;
+; SetLessThanDetector.vhd          ; yes             ; User VHDL File                     ; C:/Users/Tracy/Desktop/SomethingWitty/Processor/SetLessThanDetector.vhd ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf             ;
 ; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc              ;
 ; aglobal90.inc                    ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
@@ -201,10 +202,10 @@ applicable agreement for further details.
 +-----------------------------------+---------+
 ; Resource                          ; Usage   ;
 +-----------------------------------+---------+
-; Total logic elements              ; 392     ;
-; Total combinational functions     ; 385     ;
-;     -- Total 4-input functions    ; 187     ;
-;     -- Total 3-input functions    ; 132     ;
+; Total logic elements              ; 398     ;
+; Total combinational functions     ; 335     ;
+;     -- Total 4-input functions    ; 193     ;
+;     -- Total 3-input functions    ; 76      ;
 ;     -- Total 2-input functions    ; 33      ;
 ;     -- Total 1-input functions    ; 25      ;
 ;     -- Total 0-input functions    ; 8       ;
@@ -214,8 +215,8 @@ applicable agreement for further details.
 ; Total memory bits                 ; 6144    ;
 ; Maximum fan-out node              ; reset   ;
 ; Maximum fan-out                   ; 73      ;
-; Total fan-out                     ; 1895    ;
-; Average fan-out                   ; 3.51    ;
+; Total fan-out                     ; 1807    ;
+; Average fan-out                   ; 3.31    ;
 +-----------------------------------+---------+
 
 
@@ -224,7 +225,7 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
-; |Processor                                ; 392 (0)     ; 81           ; 6144        ; 124  ; 311 (0)      ; 7 (0)             ; 74 (0)           ; 31 (0)          ; 0 (0)      ; |Processor                                                                              ; work         ;
+; |Processor                                ; 398 (0)     ; 81           ; 6144        ; 124  ; 317 (0)      ; 63 (0)            ; 18 (0)           ; 31 (0)          ; 0 (0)      ; |Processor                                                                              ; work         ;
 ;    |ALU:inst42|                           ; 133 (118)   ; 0            ; 0           ; 0    ; 133 (118)    ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |Processor|ALU:inst42                                                                   ; work         ;
 ;       |lpm_add_sub:Add0|                  ; 15 (0)      ; 0            ; 0           ; 0    ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |Processor|ALU:inst42|lpm_add_sub:Add0                                                  ; work         ;
 ;          |addcore:adder|                  ; 15 (8)      ; 0            ; 0           ; 0    ; 15 (8)       ; 0 (0)             ; 0 (0)            ; 9 (2)           ; 0 (0)      ; |Processor|ALU:inst42|lpm_add_sub:Add0|addcore:adder                                    ; work         ;
@@ -234,7 +235,7 @@ applicable agreement for further details.
 ;          |addcore:adder|                  ; 13 (1)      ; 0            ; 0           ; 0    ; 13 (1)       ; 0 (0)             ; 0 (0)            ; 13 (1)          ; 0 (0)      ; |Processor|Clock1Hz:inst44|lpm_add_sub:Add0|addcore:adder                               ; work         ;
 ;             |a_csnbuffer:result_node|     ; 12 (12)     ; 0            ; 0           ; 0    ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 12 (12)         ; 0 (0)      ; |Processor|Clock1Hz:inst44|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node       ; work         ;
 ;    |ClockSplitter:inst|                   ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Processor|ClockSplitter:inst                                                           ; work         ;
-;    |Control:inst13|                       ; 10 (10)     ; 0            ; 0           ; 0    ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Control:inst13                                                               ; work         ;
+;    |Control:inst13|                       ; 11 (11)     ; 0            ; 0           ; 0    ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Control:inst13                                                               ; work         ;
 ;    |JRDetector:inst9|                     ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|JRDetector:inst9                                                             ; work         ;
 ;    |JumpDetector:inst10|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|JumpDetector:inst10                                                          ; work         ;
 ;    |ProgramCounter:inst1|                 ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |Processor|ProgramCounter:inst1                                                         ; work         ;
@@ -243,20 +244,21 @@ applicable agreement for further details.
 ;    |RAM:inst5|                            ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RAM:inst5                                                                    ; work         ;
 ;       |lpm_ram_dq:lpm_ram_dq_component|   ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RAM:inst5|lpm_ram_dq:lpm_ram_dq_component                                    ; work         ;
 ;          |altram:sram|                    ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RAM:inst5|lpm_ram_dq:lpm_ram_dq_component|altram:sram                        ; work         ;
-;    |RegisterFile:inst4|                   ; 166 (0)     ; 56           ; 0           ; 0    ; 110 (0)      ; 0 (0)             ; 56 (0)           ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4                                                           ; work         ;
-;       |8dffe:inst1|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst1                                               ; work         ;
-;       |8dffe:inst2|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst2                                               ; work         ;
-;       |8dffe:inst3|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst3                                               ; work         ;
-;       |8dffe:inst4|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst4                                               ; work         ;
-;       |8dffe:inst5|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst5                                               ; work         ;
-;       |8dffe:inst6|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst6                                               ; work         ;
-;       |8dffe:inst7|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst7                                               ; work         ;
-;       |DeMux:inst18|                      ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|DeMux:inst18                                              ; work         ;
+;    |RegisterFile:inst4|                   ; 168 (0)     ; 56           ; 0           ; 0    ; 112 (0)      ; 56 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4                                                           ; work         ;
+;       |8dffe:inst1|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst1                                               ; work         ;
+;       |8dffe:inst2|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst2                                               ; work         ;
+;       |8dffe:inst3|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst3                                               ; work         ;
+;       |8dffe:inst4|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst4                                               ; work         ;
+;       |8dffe:inst5|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst5                                               ; work         ;
+;       |8dffe:inst6|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst6                                               ; work         ;
+;       |8dffe:inst7|                       ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|8dffe:inst7                                               ; work         ;
+;       |DeMux:inst18|                      ; 9 (9)       ; 0            ; 0           ; 0    ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|DeMux:inst18                                              ; work         ;
 ;       |EightToOneMux:inst29|              ; 54 (54)     ; 0            ; 0           ; 0    ; 54 (54)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|EightToOneMux:inst29                                      ; work         ;
 ;       |EightToOneMux:inst30|              ; 49 (49)     ; 0            ; 0           ; 0    ; 49 (49)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|RegisterFile:inst4|EightToOneMux:inst30                                      ; work         ;
 ;    |Rom:inst3|                            ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3                                                                    ; work         ;
 ;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component                                          ; work         ;
 ;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|Rom:inst3|lpm_rom:lpm_rom_component|altrom:srom                              ; work         ;
+;    |SetLessThanDetector:inst6|            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|SetLessThanDetector:inst6                                                    ; work         ;
 ;    |busmux:inst12|                        ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst12                                                                ; work         ;
 ;       |lpm_mux:$00000|                    ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst12|lpm_mux:$00000                                                 ; work         ;
 ;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst12|lpm_mux:$00000|muxlut:$00009                                   ; work         ;
@@ -272,9 +274,9 @@ applicable agreement for further details.
 ;          |muxlut:$00019|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00019                                   ; work         ;
 ;          |muxlut:$00021|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00021                                   ; work         ;
 ;          |muxlut:$00023|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst23|lpm_mux:$00000|muxlut:$00023                                   ; work         ;
-;    |busmux:inst25|                        ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25                                                                ; work         ;
-;       |lpm_mux:$00000|                    ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000                                                 ; work         ;
-;          |muxlut:$00009|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000|muxlut:$00009                                   ; work         ;
+;    |busmux:inst25|                        ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25                                                                ; work         ;
+;       |lpm_mux:$00000|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000                                                 ; work         ;
+;          |muxlut:$00009|                  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000|muxlut:$00009                                   ; work         ;
 ;          |muxlut:$00011|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000|muxlut:$00011                                   ; work         ;
 ;          |muxlut:$00013|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000|muxlut:$00013                                   ; work         ;
 ;          |muxlut:$00015|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Processor|busmux:inst25|lpm_mux:$00000|muxlut:$00015                                   ; work         ;
@@ -577,7 +579,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 19 02:56:26 2013
+    Info: Processing started: Thu Dec 19 04:05:57 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Info: Found 1 design units, including 1 entities, in source file Processor.bdf
     Info: Found entity 1: Processor
@@ -689,6 +691,8 @@ Info: Elaborating entity "8dffe" for hierarchy "RegisterFile:inst4|8dffe:inst"
 Info: Elaborated megafunction instantiation "RegisterFile:inst4|8dffe:inst"
 Info: Elaborating entity "EightBitSplitter" for hierarchy "RegisterFile:inst4|EightBitSplitter:inst16"
 Info: Elaborating entity "DeMux" for hierarchy "RegisterFile:inst4|DeMux:inst18"
+Info: Elaborating entity "SetLessThanDetector" for hierarchy "SetLessThanDetector:inst6"
+Warning (10492): VHDL Process Statement warning at SetLessThanDetector.vhd(27): signal "aluOutput" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Elaborating entity "RAM" for hierarchy "RAM:inst5"
 Info: Elaborating entity "lpm_ram_dq" for hierarchy "RAM:inst5|lpm_ram_dq:lpm_ram_dq_component"
 Info: Elaborated megafunction instantiation "RAM:inst5|lpm_ram_dq:lpm_ram_dq_component"
@@ -746,12 +750,12 @@ Info: Elaborated megafunction instantiation "Clock1Hz:inst44|lpm_add_sub:Add0|ad
 Info: Elaborated megafunction instantiation "Clock1Hz:inst44|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "Clock1Hz:inst44|lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "Clock1Hz:inst44|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "Clock1Hz:inst44|lpm_add_sub:Add0"
 Warning: Always-enabled tri-state buffer(s) removed
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "instruction[13]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "opCodeOut[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[15]" to the node "instruction[15]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[15]" to the node "opCodeOut[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[14]" to the node "instruction[14]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[14]" to the node "opCodeOut[2]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "instruction[13]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "opCodeOut[1]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[12]" to the node "instruction[12]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[12]" to the node "opCodeOut[0]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[1]" to the node "instruction[1]" into a wire
@@ -794,22 +798,22 @@ Warning: Always-enabled tri-state buffer(s) removed
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "imm9[3]" into a wire
     Warning: Converted the fanout from the always-enabled tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "reg3[0]" into a wire
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "Control:inst13|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[15]" to the node "Control:inst13|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[14]" to the node "Control:inst13|process_0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[13]" to the node "Control:inst13|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[12]" to the node "JRDetector:inst9|isJR" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[1]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00011|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[2]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00013|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[0]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00009|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[6]" to the node "RegisterFile:inst4|EightToOneMux:inst30|process_0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[8]" to the node "RegisterFile:inst4|EightToOneMux:inst30|process_0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[7]" to the node "RegisterFile:inst4|EightToOneMux:inst30|process_0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00023|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[8]" to the node "busmux:inst12|lpm_mux:$00000|muxlut:$00013|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[7]" to the node "busmux:inst12|lpm_mux:$00000|muxlut:$00011|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[5]" to the node "busmux:inst12|lpm_mux:$00000|muxlut:$00013|result_node" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[9]" to the node "RegisterFile:inst4|EightToOneMux:inst29|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[11]" to the node "RegisterFile:inst4|EightToOneMux:inst29|process_0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[10]" to the node "RegisterFile:inst4|EightToOneMux:inst29|process_0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00017|result_node" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "busmux:inst8|lpm_mux:$00000|muxlut:$00015|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[4]" to the node "busmux:inst12|lpm_mux:$00000|muxlut:$00011|result_node" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "Rom:inst3|lpm_rom:lpm_rom_component|otri[3]" to the node "busmux:inst12|lpm_mux:$00000|muxlut:$00009|result_node" into an OR gate
 Warning: Latch ALU:inst42|varOutput[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal ALU:inst42|process_0~0
 Warning: Latch ALU:inst42|varOutput[1] has unsafe behavior
@@ -829,15 +833,15 @@ Warning: Latch ALU:inst42|varOutput[7] has unsafe behavior
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "notGround" is stuck at VCC
 Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
-Info: Implemented 540 device resources after synthesis - the final resource count might be different
+Info: Implemented 546 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 122 output pins
-    Info: Implemented 392 logic cells
+    Info: Implemented 398 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 92 warnings
-    Info: Peak virtual memory: 236 megabytes
-    Info: Processing ended: Thu Dec 19 02:56:40 2013
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 93 warnings
+    Info: Peak virtual memory: 235 megabytes
+    Info: Processing ended: Thu Dec 19 04:06:12 2013
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 

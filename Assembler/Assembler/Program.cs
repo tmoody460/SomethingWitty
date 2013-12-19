@@ -157,16 +157,15 @@ namespace Assembler
                         }
                         break;
                     case "jr":
-                    case "jal":
-                        if (arguments.Length == 2)
+                        if (arguments.Length == 1)
                         {
                             validateRegister(arguments[0], lineNumber, false);
-                            validateImmediate(arguments[1], 9, lineNumber);
                         }
                         else
                         {
                             throw new Exception("Invalid number of arguments on line " + lineNumber);
-                        }                        break;
+                        }                        
+                        break;
                     case "j":
                         if (arguments.Length == 1)
                         {
@@ -313,7 +312,6 @@ namespace Assembler
 
             opCode.Add("j","1001");
             opCode.Add("jr", "1000");
-            opCode.Add("jal", "1010");
 
             opCode.Add("beq", "1100");
             opCode.Add("bne", "1101");
@@ -388,9 +386,8 @@ namespace Assembler
                         writer.Write(convertAndSignExtend(immediate.ToString(), 6, labelTable));
                         break;
                     case "jr":
-                    case "jal":
                         writer.Write(convertAndSignExtend(parts[startingIndex + 1], 3, labelTable));
-                        writer.Write(convertAndSignExtend(parts[startingIndex + 2], 9, labelTable));
+                        writer.Write(convertAndSignExtend("0", 9, labelTable));
                         break;
                     case "j":
                         writer.Write(convertAndSignExtend(parts[startingIndex + 1], 12, labelTable));

@@ -1196,6 +1196,156 @@ applicable agreement for further details.
 		(line (pt 118 62)(pt 123 57)(line_width 1))
 	)
 )
+(symbol
+	(rect 1000 16 1088 128)
+	(text "BUSMUX" (rect 0 21 16 84)(font "Arial" (font_size 10))(vertical))
+	(text "inst7" (rect 77 86 89 109)(font "Arial" )(vertical))
+	(port
+		(pt 64 112)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 51 68 65 106)(font "Arial" (font_size 8))(vertical))
+		(line (pt 64 112)(pt 64 68)(line_width 3))
+	)
+	(port
+		(pt 88 56)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 70 37 84 53)(font "Arial" (font_size 8))(vertical))
+		(line (pt 88 56)(pt 72 56)(line_width 1))
+	)
+	(port
+		(pt 32 112)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 19 68 33 106)(font "Arial" (font_size 8))(vertical))
+		(line (pt 32 112)(pt 32 68)(line_width 3))
+	)
+	(port
+		(pt 48 0)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 35 -1 49 37)(font "Arial" (font_size 8))(vertical))
+		(line (pt 48 44)(pt 48 0)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"8"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 31 56 41 60)(font "Arial" (font_size 6))(vertical))
+		(text "1" (rect 55 56 65 60)(font "Arial" (font_size 6))(vertical))
+		(line (pt 64 44)(pt 32 44)(line_width 1))
+		(line (pt 80 68)(pt 16 68)(line_width 1))
+		(line (pt 16 68)(pt 32 44)(line_width 1))
+		(line (pt 80 68)(pt 64 44)(line_width 1))
+	)
+	(rotate90)
+	(annotation_block (parameter)(rect 1112 -24 1216 8))
+)
+(symbol
+	(rect 1280 104 1392 192)
+	(text "BUSMUX" (rect 21 72 84 88)(font "Arial" (font_size 10)))
+	(text "inst8" (rect 86 -1 109 11)(font "Arial" ))
+	(port
+		(pt 112 24)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 68 23 106 37)(font "Arial" (font_size 8)))
+		(line (pt 112 24)(pt 68 24)(line_width 3))
+	)
+	(port
+		(pt 56 0)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 37 4 53 18)(font "Arial" (font_size 8)))
+		(line (pt 56 0)(pt 56 16)(line_width 1))
+	)
+	(port
+		(pt 112 56)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 68 55 106 69)(font "Arial" (font_size 8)))
+		(line (pt 112 56)(pt 68 56)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect -1 39 37 53)(font "Arial" (font_size 8)))
+		(line (pt 44 40)(pt 0 40)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"8"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 56 47 60 57)(font "Arial" (font_size 6)))
+		(text "1" (rect 56 23 60 33)(font "Arial" (font_size 6)))
+		(line (pt 44 24)(pt 44 56)(line_width 1))
+		(line (pt 68 8)(pt 68 72)(line_width 1))
+		(line (pt 68 72)(pt 44 56)(line_width 1))
+		(line (pt 68 8)(pt 44 24)(line_width 1))
+	)
+	(rotate180)
+	(annotation_block (parameter)(rect 1280 200 1384 232))
+)
+(symbol
+	(rect 1592 -152 1728 -56)
+	(text "JRDetector" (rect 5 0 61 12)(font "Arial" ))
+	(text "inst9" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "opCode[3..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "opCode[3..0]" (rect 21 27 84 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "isJR" (rect 0 0 22 12)(font "Arial" ))
+		(text "isJR" (rect 93 27 115 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 80)(line_width 1))
+	)
+)
+(symbol
+	(rect 1392 -296 1576 -200)
+	(text "JumpDetector" (rect 110 0 179 12)(font "Arial" ))
+	(text "inst10" (rect 147 80 176 92)(font "Arial" ))
+	(port
+		(pt 184 32)
+		(input)
+		(text "opCode[3..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "opCode[3..0]" (rect 100 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(input)
+		(text "zeroFlag" (rect 0 0 41 12)(font "Arial" ))
+		(text "zeroFlag" (rect 122 43 163 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 1))
+	)
+	(port
+		(pt 0 32)
+		(output)
+		(text "jumpDetected" (rect 0 0 68 12)(font "Arial" ))
+		(text "jumpDetected" (rect 21 27 89 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 80)(line_width 1))
+	)
+	(flipy)
+)
 (connector
 	(pt 416 304)
 	(pt 416 120)
@@ -1225,21 +1375,6 @@ applicable agreement for further details.
 (connector
 	(pt 680 200)
 	(pt 728 200)
-	(bus)
-)
-(connector
-	(pt 888 56)
-	(pt 888 200)
-	(bus)
-)
-(connector
-	(pt 888 56)
-	(pt 432 56)
-	(bus)
-)
-(connector
-	(pt 432 56)
-	(pt 432 104)
 	(bus)
 )
 (connector
@@ -1288,11 +1423,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1304 464)
-	(pt 1280 464)
-	(bus)
-)
-(connector
 	(pt 1264 440)
 	(pt 1264 488)
 	(bus)
@@ -1310,11 +1440,6 @@ applicable agreement for further details.
 (connector
 	(pt 1240 344)
 	(pt 1240 48)
-	(bus)
-)
-(connector
-	(pt 1240 48)
-	(pt 1520 48)
 	(bus)
 )
 (connector
@@ -1488,10 +1613,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 2720 704)
-	(pt 2752 704)
-)
-(connector
 	(pt 2720 720)
 	(pt 2752 720)
 )
@@ -1609,11 +1730,6 @@ applicable agreement for further details.
 (connector
 	(pt 1248 800)
 	(pt 1384 800)
-	(bus)
-)
-(connector
-	(pt 1552 800)
-	(pt 2360 800)
 	(bus)
 )
 (connector
@@ -1756,11 +1872,6 @@ applicable agreement for further details.
 (connector
 	(pt 2168 488)
 	(pt 2312 488)
-	(bus)
-)
-(connector
-	(pt 2312 488)
-	(pt 2376 488)
 	(bus)
 )
 (connector
@@ -1987,6 +2098,213 @@ applicable agreement for further details.
 	(pt 416 608)
 	(pt 416 1120)
 )
+(connector
+	(pt 1032 128)
+	(pt 1032 200)
+	(bus)
+)
+(connector
+	(pt 888 200)
+	(pt 1032 200)
+	(bus)
+)
+(connector
+	(pt 432 104)
+	(pt 432 -24)
+	(bus)
+)
+(connector
+	(pt 1048 -24)
+	(pt 432 -24)
+	(bus)
+)
+(connector
+	(pt 1048 -24)
+	(pt 1048 16)
+	(bus)
+)
+(connector
+	(pt 1504 160)
+	(pt 1392 160)
+	(bus)
+)
+(connector
+	(pt 1064 128)
+	(pt 1064 144)
+	(bus)
+)
+(connector
+	(pt 1064 144)
+	(pt 1280 144)
+	(bus)
+)
+(connector
+	(pt 2344 488)
+	(pt 2344 256)
+	(bus)
+)
+(connector
+	(pt 2344 256)
+	(pt 2456 256)
+	(bus)
+)
+(connector
+	(pt 2312 488)
+	(pt 2344 488)
+	(bus)
+)
+(connector
+	(pt 2344 488)
+	(pt 2376 488)
+	(bus)
+)
+(connector
+	(pt 2456 256)
+	(pt 2456 -40)
+	(bus)
+)
+(connector
+	(pt 2456 -40)
+	(pt 1416 -40)
+	(bus)
+)
+(connector
+	(pt 1416 128)
+	(pt 1392 128)
+	(bus)
+)
+(connector
+	(pt 1416 -40)
+	(pt 1416 128)
+	(bus)
+)
+(connector
+	(pt 1088 72)
+	(pt 1168 72)
+)
+(connector
+	(pt 1168 16)
+	(pt 1168 72)
+)
+(connector
+	(pt 1168 16)
+	(pt 1248 16)
+)
+(connector
+	(pt 1488 48)
+	(pt 1488 -120)
+	(bus)
+)
+(connector
+	(pt 1240 48)
+	(pt 1488 48)
+	(bus)
+)
+(connector
+	(pt 1488 48)
+	(pt 1520 48)
+	(bus)
+)
+(connector
+	(pt 1728 -120)
+	(pt 1752 -120)
+)
+(connector
+	(pt 1752 -120)
+	(pt 1752 -176)
+)
+(connector
+	(pt 1336 104)
+	(pt 1336 -176)
+)
+(connector
+	(pt 1336 -176)
+	(pt 1752 -176)
+)
+(connector
+	(pt 1248 16)
+	(pt 1248 -264)
+)
+(connector
+	(pt 1392 -264)
+	(pt 1248 -264)
+)
+(connector
+	(pt 1576 -264)
+	(pt 1600 -264)
+	(bus)
+)
+(connector
+	(pt 1600 -264)
+	(pt 1600 -160)
+	(bus)
+)
+(connector
+	(pt 1600 -160)
+	(pt 1568 -160)
+	(bus)
+)
+(connector
+	(pt 1568 -160)
+	(pt 1568 -120)
+	(bus)
+)
+(connector
+	(pt 1488 -120)
+	(pt 1568 -120)
+	(bus)
+)
+(connector
+	(pt 1568 -120)
+	(pt 1592 -120)
+	(bus)
+)
+(connector
+	(pt 2720 704)
+	(pt 2736 704)
+)
+(connector
+	(pt 2736 704)
+	(pt 2752 704)
+)
+(connector
+	(pt 2736 -248)
+	(pt 1576 -248)
+)
+(connector
+	(pt 2736 -248)
+	(pt 2736 704)
+)
+(connector
+	(pt 1280 464)
+	(pt 1304 464)
+	(bus)
+)
+(connector
+	(pt 1504 760)
+	(pt 1504 160)
+	(bus)
+)
+(connector
+	(pt 1504 760)
+	(pt 1576 760)
+	(bus)
+)
+(connector
+	(pt 1576 800)
+	(pt 1576 760)
+	(bus)
+)
+(connector
+	(pt 1552 800)
+	(pt 1576 800)
+	(bus)
+)
+(connector
+	(pt 1576 800)
+	(pt 2360 800)
+	(bus)
+)
 (junction (pt 416 304))
 (junction (pt 680 104))
 (junction (pt 680 200))
@@ -2016,4 +2334,8 @@ applicable agreement for further details.
 (junction (pt 1736 176))
 (junction (pt 1768 152))
 (junction (pt 416 608))
-(text "Put a mux here so it could also have come from memory" (rect 2248 928 2565 942)(font "Arial" (font_size 8)))
+(junction (pt 2344 488))
+(junction (pt 1488 48))
+(junction (pt 1568 -120))
+(junction (pt 2736 704))
+(junction (pt 1576 800))

@@ -74,3 +74,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE ALUandRegFileTest.vwf
 set_global_assignment -name QIP_FILE RAM.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE RAMTest.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE RAMTest.vwf
+set_global_assignment -name VHDL_FILE JRDetector.vhd
+set_global_assignment -name VHDL_FILE JumpDetector.vhd

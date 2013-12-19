@@ -69,6 +69,10 @@ BEGIN
 		tempALUOp <= "110";
 	ELSIF (opCode(3) = '0' AND opCode(2) = '0' AND opCode(1) = '1') THEN
 		tempALUOp <= "111";
+	ELSIF (opCode(3) = '0' AND opCode(2) = '1' AND opCode(0)='1') THEN
+		tempALUOp <= "110";
+	ELSIF (opCode(3) = '0' AND opCode(2) = '1' AND opCode(0)='0') THEN
+		tempALUOp <= "111";
 	ELSE
 		tempALUOp <= ALUCode;
 	END IF;

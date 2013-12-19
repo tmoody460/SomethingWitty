@@ -41,5 +41,6 @@ ELSE
 END IF;
 
 END PROCESS;
-	
+
+readReg <= tempReadReg;
 END behavior;

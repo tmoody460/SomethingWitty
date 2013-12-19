@@ -31,6 +31,8 @@ Process(opCode, ALUCode)
 BEGIN
 	IF (opCode(3) = '0' AND opCode(2) = '0' AND opCode(1) = '0') THEN
 		tempRegDst <= '1';
+	ELSIF (opCode(3) = '1' AND opCode(2) = '1' AND opCode(1) = '1') THEN
+		tempRegDst <= '1';
 	ELSE
 		tempRegDst <= '0';
 	END IF;

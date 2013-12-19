@@ -171,35 +171,36 @@ clock <= clockTmp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Processor|Control:inst13
-opCode[0] => process_0~12.IN0
+opCode[0] => process_0~13.IN0
+opCode[0] => process_0~8.IN1
+opCode[0] => process_0~11.IN1
+opCode[0] => process_0~15.IN0
 opCode[0] => process_0~7.IN1
-opCode[0] => process_0~10.IN1
-opCode[0] => process_0~14.IN0
 opCode[0] => process_0~6.IN1
-opCode[0] => process_0~5.IN1
-opCode[1] => process_0~10.IN0
+opCode[1] => process_0~11.IN0
+opCode[1] => process_0~5.IN0
+opCode[1] => process_0~3.IN1
 opCode[1] => process_0~4.IN1
-opCode[1] => process_0~3.IN0
-opCode[1] => process_0~1.IN1
-opCode[2] => process_0~13.IN1
+opCode[1] => process_0~1.IN0
+opCode[2] => process_0~14.IN1
 opCode[2] => process_0~2.IN1
 opCode[2] => process_0~0.IN1
 opCode[3] => process_0~2.IN0
-opCode[3] => process_0~13.IN0
+opCode[3] => process_0~14.IN0
 opCode[3] => process_0~0.IN0
 aluCode[0] => tempALUOp~2.DATAA
 aluCode[1] => tempALUOp~1.DATAA
 aluCode[2] => tempALUOp~0.DATAA
-RegDst <= process_0~1.DB_MAX_OUTPUT_PORT_TYPE
-Branch <= process_0~3.DB_MAX_OUTPUT_PORT_TYPE
-MemRead <= process_0~5.DB_MAX_OUTPUT_PORT_TYPE
-MemToReg <= process_0~6.DB_MAX_OUTPUT_PORT_TYPE
+RegDst <= tempRegDst~0.DB_MAX_OUTPUT_PORT_TYPE
+Branch <= process_0~4.DB_MAX_OUTPUT_PORT_TYPE
+MemRead <= process_0~6.DB_MAX_OUTPUT_PORT_TYPE
+MemToReg <= process_0~7.DB_MAX_OUTPUT_PORT_TYPE
 ALUOp[0] <= tempALUOp~11.DB_MAX_OUTPUT_PORT_TYPE
 ALUOp[1] <= tempALUOp~10.DB_MAX_OUTPUT_PORT_TYPE
 ALUOp[2] <= tempALUOp~9.DB_MAX_OUTPUT_PORT_TYPE
-MemWrite <= process_0~7.DB_MAX_OUTPUT_PORT_TYPE
-ALUSrc <= process_0~8.DB_MAX_OUTPUT_PORT_TYPE
-RegWrite <= process_0~11.DB_MAX_OUTPUT_PORT_TYPE
+MemWrite <= process_0~8.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc <= process_0~9.DB_MAX_OUTPUT_PORT_TYPE
+RegWrite <= process_0~12.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Processor|Decoder:inst14
@@ -2165,6 +2166,31 @@ result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
 clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
 aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
 clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|SetLessThanDetector:inst6
+overflowFlag => process_0~4.IN0
+signFlag => process_0~4.IN1
+opCode[0] => process_0~3.IN1
+opCode[1] => process_0~2.IN1
+opCode[2] => process_0~1.IN1
+opCode[3] => process_0~1.IN0
+aluOutput[0] => tempOutput~7.DATAA
+aluOutput[1] => tempOutput~6.DATAA
+aluOutput[2] => tempOutput~5.DATAA
+aluOutput[3] => tempOutput~4.DATAA
+aluOutput[4] => tempOutput~3.DATAA
+aluOutput[5] => tempOutput~2.DATAA
+aluOutput[6] => tempOutput~1.DATAA
+aluOutput[7] => tempOutput~0.DATAA
+output[0] <= tempOutput~15.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= tempOutput~14.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= tempOutput~13.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= tempOutput~12.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= tempOutput~11.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= tempOutput~10.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= tempOutput~9.DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= tempOutput~8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Processor|RAM:inst5

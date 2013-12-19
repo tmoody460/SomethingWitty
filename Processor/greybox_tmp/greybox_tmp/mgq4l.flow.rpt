@@ -1,0 +1,95 @@
+Flow report for mgq4l
+Thu Dec 19 03:46:16 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Flow Summary                                                           ;
++-------------------------+----------------------------------------------+
+; Flow Status             ; Flow Failed - Thu Dec 19 03:46:16 2013       ;
+; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name           ; mgq4l                                        ;
+; Top-level Entity Name   ; mgq4l                                        ;
+; Family                  ; FLEX10K                                      ;
+; Met timing requirements ; N/A                                          ;
++-------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/19/2013 03:46:15 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; mgq4l               ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                   ;
++-----------------------+---------------------------------+---------------+-------------+------------+
+; Assignment Name       ; Value                           ; Default Value ; Entity Name ; Section Id ;
++-----------------------+---------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID ; 128527090788407.138744637505604 ; --            ; --          ; --         ;
++-----------------------+---------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 205 MB              ; 00:00:02                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++----------------------+------------------+---------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++----------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis ; Tracy-PC         ; Windows Vista ; 6.1        ; x86_64         ;
++----------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map mgq4l --source=C:\Users\Tracy\Desktop\SomethingWitty\Processor\greybox_tmp/greybox_tmp/mgq4l.v --ini=greybox_disable_cut_checks=on --family=FLEX10K
+
+
+

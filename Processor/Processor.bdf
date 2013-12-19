@@ -1168,35 +1168,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 2664 1016 2768 1048))
 )
 (symbol
-	(rect 712 312 928 432)
-	(text "Rom" (rect 95 1 126 17)(font "Arial" (font_size 10)))
-	(text "inst3" (rect 8 104 31 116)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "address[7..0]" (rect 0 0 75 14)(font "Arial" (font_size 8)))
-		(text "address[7..0]" (rect 4 19 79 33)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 104 32)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "q[15..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
-		(text "q[15..0]" (rect 177 19 219 33)(font "Arial" (font_size 8)))
-		(line (pt 216 32)(pt 136 32)(line_width 3))
-	)
-	(drawing
-		(text "16 bits" (rect 108 46 120 79)(font "Arial" )(vertical))
-		(text "256 words" (rect 121 39 133 88)(font "Arial" )(vertical))
-		(line (pt 104 24)(pt 136 24)(line_width 1))
-		(line (pt 136 24)(pt 136 96)(line_width 1))
-		(line (pt 136 96)(pt 104 96)(line_width 1))
-		(line (pt 104 96)(pt 104 24)(line_width 1))
-		(line (pt 118 58)(pt 123 63)(line_width 1))
-		(line (pt 118 62)(pt 123 57)(line_width 1))
-	)
-)
-(symbol
 	(rect 1000 16 1088 128)
 	(text "BUSMUX" (rect 0 21 16 84)(font "Arial" (font_size 10))(vertical))
 	(text "inst7" (rect 77 86 89 109)(font "Arial" )(vertical))
@@ -1346,6 +1317,78 @@ applicable agreement for further details.
 	)
 	(flipy)
 )
+(symbol
+	(rect 2976 768 3160 896)
+	(text "SetLessThanDetector" (rect 5 0 111 12)(font "Arial" ))
+	(text "inst6" (rect 8 112 31 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "overflowFlag" (rect 0 0 63 12)(font "Arial" ))
+		(text "overflowFlag" (rect 21 27 84 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "signFlag" (rect 0 0 41 12)(font "Arial" ))
+		(text "signFlag" (rect 21 43 62 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "opCode[3..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "opCode[3..0]" (rect 21 59 84 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aluOutput[7..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "aluOutput[7..0]" (rect 21 75 94 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "output[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "output[7..0]" (rect 107 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 112)(line_width 1))
+	)
+)
+(symbol
+	(rect 712 312 928 432)
+	(text "Rom" (rect 95 1 126 17)(font "Arial" (font_size 10)))
+	(text "inst3" (rect 8 104 31 116)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "address[7..0]" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "address[7..0]" (rect 4 19 79 33)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 104 32)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "q[15..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "q[15..0]" (rect 177 19 219 33)(font "Arial" (font_size 8)))
+		(line (pt 216 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(text "16 bits" (rect 108 46 120 79)(font "Arial" )(vertical))
+		(text "256 words" (rect 121 39 133 88)(font "Arial" )(vertical))
+		(line (pt 104 24)(pt 136 24)(line_width 1))
+		(line (pt 136 24)(pt 136 96)(line_width 1))
+		(line (pt 136 96)(pt 104 96)(line_width 1))
+		(line (pt 104 96)(pt 104 24)(line_width 1))
+		(line (pt 118 58)(pt 123 63)(line_width 1))
+		(line (pt 118 62)(pt 123 57)(line_width 1))
+	)
+)
 (connector
 	(pt 416 304)
 	(pt 416 120)
@@ -1440,11 +1483,6 @@ applicable agreement for further details.
 (connector
 	(pt 1240 344)
 	(pt 1240 48)
-	(bus)
-)
-(connector
-	(pt 1224 344)
-	(pt 1240 344)
 	(bus)
 )
 (connector
@@ -1611,14 +1649,6 @@ applicable agreement for further details.
 	(pt 2280 720)
 	(pt 2552 720)
 	(bus)
-)
-(connector
-	(pt 2720 720)
-	(pt 2752 720)
-)
-(connector
-	(pt 2720 736)
-	(pt 2752 736)
 )
 (connector
 	(pt 2296 768)
@@ -1892,11 +1922,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 2952 928)
-	(pt 2880 928)
-	(bus)
-)
-(connector
 	(pt 3264 504)
 	(pt 3264 960)
 	(bus)
@@ -1904,11 +1929,6 @@ applicable agreement for further details.
 (connector
 	(pt 2952 536)
 	(pt 2952 688)
-	(bus)
-)
-(connector
-	(pt 2952 688)
-	(pt 2952 928)
 	(bus)
 )
 (connector
@@ -2305,6 +2325,103 @@ applicable agreement for further details.
 	(pt 2360 800)
 	(bus)
 )
+(connector
+	(pt 2952 848)
+	(pt 2976 848)
+	(bus)
+)
+(connector
+	(pt 2952 688)
+	(pt 2952 848)
+	(bus)
+)
+(connector
+	(pt 3192 928)
+	(pt 2880 928)
+	(bus)
+)
+(connector
+	(pt 3192 928)
+	(pt 3192 800)
+	(bus)
+)
+(connector
+	(pt 3192 800)
+	(pt 3160 800)
+	(bus)
+)
+(connector
+	(pt 2976 800)
+	(pt 2744 800)
+)
+(connector
+	(pt 2744 800)
+	(pt 2744 720)
+)
+(connector
+	(pt 2720 720)
+	(pt 2744 720)
+)
+(connector
+	(pt 2744 720)
+	(pt 2752 720)
+)
+(connector
+	(pt 2976 816)
+	(pt 2728 816)
+)
+(connector
+	(pt 2728 816)
+	(pt 2728 736)
+)
+(connector
+	(pt 2720 736)
+	(pt 2728 736)
+)
+(connector
+	(pt 2728 736)
+	(pt 2752 736)
+)
+(connector
+	(pt 1232 344)
+	(pt 1232 728)
+	(bus)
+)
+(connector
+	(pt 1224 344)
+	(pt 1232 344)
+	(bus)
+)
+(connector
+	(pt 1232 344)
+	(pt 1240 344)
+	(bus)
+)
+(connector
+	(pt 2200 728)
+	(pt 2200 896)
+	(bus)
+)
+(connector
+	(pt 1232 728)
+	(pt 2200 728)
+	(bus)
+)
+(connector
+	(pt 2200 896)
+	(pt 2744 896)
+	(bus)
+)
+(connector
+	(pt 2744 896)
+	(pt 2744 832)
+	(bus)
+)
+(connector
+	(pt 2976 832)
+	(pt 2744 832)
+	(bus)
+)
 (junction (pt 416 304))
 (junction (pt 680 104))
 (junction (pt 680 200))
@@ -2339,3 +2456,6 @@ applicable agreement for further details.
 (junction (pt 1568 -120))
 (junction (pt 2736 704))
 (junction (pt 1576 800))
+(junction (pt 2744 720))
+(junction (pt 2728 736))
+(junction (pt 1232 344))

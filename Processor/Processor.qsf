@@ -46,7 +46,7 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name END_TIME "300 us"
+set_global_assignment -name END_TIME "1000 us"
 set_global_assignment -name SOURCE_FILE Rom.cmp
 set_global_assignment -name BDF_FILE Processor.bdf
 set_global_assignment -name VHDL_FILE Clock1Hz.vhd
@@ -73,9 +73,11 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE ALUTester.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ALUandRegFileTest.vwf
 set_global_assignment -name QIP_FILE RAM.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE RAMTest.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE RAMTest.vwf
 set_global_assignment -name VHDL_FILE JRDetector.vhd
 set_global_assignment -name VHDL_FILE JumpDetector.vhd
 set_global_assignment -name MISC_FILE "C:/Users/Nathan/SomethingWitty/Processor/Processor.dpf"
 set_global_assignment -name FLEX10K_DEVICE_IO_STANDARD TTL
 set_location_assignment PIN_91 -to clk
+set_global_assignment -name VHDL_FILE SetLessThanDetector.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE BranchingJumpingSettingTest.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE BranchingJumpingSettingTest.vwf

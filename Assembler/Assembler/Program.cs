@@ -14,7 +14,7 @@ namespace Assembler
         static void Main(string[] args)
         {
 
-            StreamReader reader = new StreamReader("C:\\Users\\Tracy\\Desktop\\SampleAssemblyProgram.s");
+            StreamReader reader = new StreamReader("C:\\Users\\Tracy\\Desktop\\multiplication.s");
             StreamWriter writer = new StreamWriter("C:\\Users\\Tracy\\Desktop\\output.mif");
 
             labelTable = makeLabelTable(reader);
@@ -202,7 +202,7 @@ namespace Assembler
             }
 
             if (immediateNumber < -1 * Math.Pow(2, size) || immediateNumber > Math.Pow(2, size) - 1) {
-                throw new Exception("Invalid number " + immediate + "on line " + lineNumber);
+                throw new Exception("Invalid number " + immediate + " on line " + lineNumber);
             }
         }
 
@@ -273,6 +273,10 @@ namespace Assembler
             for (int i = 0; i < numberToExtend; i++)
             {
                 binary = "0" + binary;   
+            }
+            if (binary.Length > numBits)
+            {
+                binary = binary.Substring(binary.Length - numBits);
             }
             return binary;
         }

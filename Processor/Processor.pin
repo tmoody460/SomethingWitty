@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Wed Dec 18 17:31:12 2013
+File Generation Date & Time: Wed Dec 18 20:08:55 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "Processor"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -47,117 +47,117 @@ CONF_DONE                    : 2         : bidir  :                   :         
 nCEO                         : 3         : output :                   :         :           :                
 TDO                          : 4         : output :                   :         :           :                
 VCC_INT                      : 5         : power  :                   : 5.0V    :           :                
-GND*                         : 6         :        :                   :         :           :                
-imm6[3]                      : 7         : output : TTL               :         :           : N              
-reg1[2]                      : 8         : output : TTL               :         :           : N              
-readReg1[2]                  : 9         : output : TTL               :         :           : N              
+Branch                       : 6         : output : TTL               :         :           : N              
+instruction[12]              : 7         : output : TTL               :         :           : N              
+testOF                       : 8         : output : TTL               :         :           : N              
+imm6[5]                      : 9         : output : TTL               :         :           : N              
 GND_INT                      : 10        : gnd    :                   :         :           :                
-instruction[11]              : 11        : output : TTL               :         :           : N              
-aluOutput[1]                 : 12        : output : TTL               :         :           : N              
-aluCode[1]                   : 13        : output : TTL               :         :           : N              
-RegDst                       : 14        : output : TTL               :         :           : N              
-RegWrite                     : 15        : output : TTL               :         :           : N              
+GND*                         : 11        :        :                   :         :           :                
+toWrite[4]                   : 12        : input  : TTL               :         :           : N              
+instruction[7]               : 13        : output : TTL               :         :           : N              
+reg2[1]                      : 14        : output : TTL               :         :           : N              
+testALUOut[7]                : 15        : output : TTL               :         :           : N              
 VCC_INT                      : 16        : power  :                   : 5.0V    :           :                
-aluOutput[7]                 : 17        : output : TTL               :         :           : N              
-MemRead                      : 18        : output : TTL               :         :           : N              
+instruction[8]               : 17        : output : TTL               :         :           : N              
+imm9[7]                      : 18        : output : TTL               :         :           : N              
 imm9[2]                      : 19        : output : TTL               :         :           : N              
-imm6[2]                      : 20        : output : TTL               :         :           : N              
+instruction[4]               : 20        : output : TTL               :         :           : N              
 GND*                         : 21        :        :                   :         :           :                
 GND_INT                      : 22        : gnd    :                   :         :           :                
-aluCode[0]                   : 23        : output : TTL               :         :           : N              
-instruction[2]               : 24        : output : TTL               :         :           : N              
-GND*                         : 25        :        :                   :         :           :                
-outputPC[2]                  : 26        : output : TTL               :         :           : N              
+aluCode[2]                   : 23        : output : TTL               :         :           : N              
+readReg1[4]                  : 24        : output : TTL               :         :           : N              
+readReg2[2]                  : 25        : output : TTL               :         :           : N              
+GND*                         : 26        :        :                   :         :           :                
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
-toWrite[2]                   : 28        : input  : TTL               :         :           : N              
-imm9[7]                      : 29        : output : TTL               :         :           : N              
-instruction[5]               : 30        : output : TTL               :         :           : N              
-reg3[2]                      : 31        : output : TTL               :         :           : N              
+outputPC[4]                  : 28        : output : TTL               :         :           : N              
+GND*                         : 29        :        :                   :         :           :                
+opCodeOut[3]                 : 30        : output : TTL               :         :           : N              
+instruction[10]              : 31        : output : TTL               :         :           : N              
 GND_INT                      : 32        : gnd    :                   :         :           :                
-reg2[1]                      : 33        : output : TTL               :         :           : N              
-instruction[7]               : 34        : output : TTL               :         :           : N              
-imm9[5]                      : 35        : output : TTL               :         :           : N              
-instruction[4]               : 36        : output : TTL               :         :           : N              
+reg1[1]                      : 33        : output : TTL               :         :           : N              
+opCodeOut[2]                 : 34        : output : TTL               :         :           : N              
+instruction[13]              : 35        : output : TTL               :         :           : N              
+GND*                         : 36        :        :                   :         :           :                
 VCC_INT                      : 37        : power  :                   : 5.0V    :           :                
-imm6[4]                      : 38        : output : TTL               :         :           : N              
-imm9[4]                      : 39        : output : TTL               :         :           : N              
-GND*                         : 40        :        :                   :         :           :                
-GND*                         : 41        :        :                   :         :           :                
+imm9[6]                      : 38        : output : TTL               :         :           : N              
+GND*                         : 39        :        :                   :         :           :                
+reg1[2]                      : 40        : output : TTL               :         :           : N              
+instruction[11]              : 41        : output : TTL               :         :           : N              
 GND_INT                      : 42        : gnd    :                   :         :           :                
-aluOutput[6]                 : 43        : output : TTL               :         :           : N              
-GND*                         : 44        :        :                   :         :           :                
-instruction[1]               : 45        : output : TTL               :         :           : N              
-MemToReg                     : 46        : output : TTL               :         :           : N              
+ALUOp[1]                     : 43        : output : TTL               :         :           : N              
+aluOutput[6]                 : 44        : output : TTL               :         :           : N              
+imm6[0]                      : 45        : output : TTL               :         :           : N              
+imm6[3]                      : 46        : output : TTL               :         :           : N              
 VCC_INT                      : 47        : power  :                   : 5.0V    :           :                
-reg1[0]                      : 48        : output : TTL               :         :           : N              
-instruction[15]              : 49        : output : TTL               :         :           : N              
-instruction[9]               : 50        : output : TTL               :         :           : N              
-reg1[1]                      : 51        : output : TTL               :         :           : N              
+imm9[5]                      : 48        : output : TTL               :         :           : N              
+reg3[2]                      : 49        : output : TTL               :         :           : N              
+instruction[5]               : 50        : output : TTL               :         :           : N              
+ALUSrc                       : 51        : output : TTL               :         :           : N              
 GND_INT                      : 52        : gnd    :                   :         :           :                
-aluOutput[3]                 : 53        : output : TTL               :         :           : N              
-GND*                         : 54        :        :                   :         :           :                
-toWrite[5]                   : 55        : input  : TTL               :         :           : N              
-imm9[6]                      : 56        : output : TTL               :         :           : N              
+testALUOut[6]                : 53        : output : TTL               :         :           : N              
+instruction[1]               : 54        : output : TTL               :         :           : N              
+zeroFlag                     : 55        : output : TTL               :         :           : N              
+aluCode[1]                   : 56        : output : TTL               :         :           : N              
 VCC_INT                      : 57        : power  :                   : 5.0V    :           :                
 TMS                          : 58        : input  :                   :         :           :                
 TRST                         : 59        : input  :                   :         :           :                
 nSTATUS                      : 60        : bidir  :                   :         :           :                
 GND*                         : 61        :        :                   :         :           :                
 GND*                         : 62        :        :                   :         :           :                
-GND*                         : 63        :        :                   :         :           :                
+readReg1[6]                  : 63        : output : TTL               :         :           : N              
 GND*                         : 64        :        :                   :         :           :                
-GND*                         : 65        :        :                   :         :           :                
+val2test[7]                  : 65        : input  : TTL               :         :           : N              
 GND*                         : 66        :        :                   :         :           :                
-GND*                         : 67        :        :                   :         :           :                
-GND*                         : 68        :        :                   :         :           :                
+val1test[2]                  : 67        : input  : TTL               :         :           : N              
+val1test[6]                  : 68        : input  : TTL               :         :           : N              
 GND_INT                      : 69        : gnd    :                   :         :           :                
-GND*                         : 70        :        :                   :         :           :                
-toWrite[3]                   : 71        : input  : TTL               :         :           : N              
-GND*                         : 72        :        :                   :         :           :                
+testALUOut[4]                : 70        : output : TTL               :         :           : N              
+GND*                         : 71        :        :                   :         :           :                
+testALUOut[3]                : 72        : output : TTL               :         :           : N              
 GND*                         : 73        :        :                   :         :           :                
-readReg1[7]                  : 74        : output : TTL               :         :           : N              
-GND*                         : 75        :        :                   :         :           :                
-GND*                         : 76        :        :                   :         :           :                
+testALUCode[0]               : 74        : input  : TTL               :         :           : N              
+clk1                         : 75        : output : TTL               :         :           : N              
+toWrite[3]                   : 76        : input  : TTL               :         :           : N              
 VCC_INT                      : 77        : power  :                   : 5.0V    :           :                
 GND*                         : 78        :        :                   :         :           :                
-GND*                         : 79        :        :                   :         :           :                
-readReg2[3]                  : 80        : output : TTL               :         :           : N              
-GND*                         : 81        :        :                   :         :           :                
+val1test[7]                  : 79        : input  : TTL               :         :           : N              
+GND*                         : 80        :        :                   :         :           :                
+toWrite[7]                   : 81        : input  : TTL               :         :           : N              
 GND*                         : 82        :        :                   :         :           :                
-readReg1[0]                  : 83        : output : TTL               :         :           : N              
+overflowFlag                 : 83        : output : TTL               :         :           : N              
 GND*                         : 84        :        :                   :         :           :                
 GND_INT                      : 85        : gnd    :                   :         :           :                
-GND*                         : 86        :        :                   :         :           :                
-Branch                       : 87        : output : TTL               :         :           : N              
+testSign                     : 86        : output : TTL               :         :           : N              
+readReg2[3]                  : 87        : output : TTL               :         :           : N              
 imm9[1]                      : 88        : output : TTL               :         :           : N              
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
-toWrite[0]                   : 90        : input  : TTL               :         :           : N              
+val2test[1]                  : 90        : input  : TTL               :         :           : N              
 clk                          : 91        : input  : TTL               :         :           : N              
-toWrite[1]                   : 92        : input  : TTL               :         :           : N              
+val2test[0]                  : 92        : input  : TTL               :         :           : N              
 GND_INT                      : 93        : gnd    :                   :         :           :                
-outputPC[3]                  : 94        : output : TTL               :         :           : N              
-outputPC[1]                  : 95        : output : TTL               :         :           : N              
+outputPC[5]                  : 94        : output : TTL               :         :           : N              
+aluOutput[2]                 : 95        : output : TTL               :         :           : N              
 VCC_INT                      : 96        : power  :                   : 5.0V    :           :                
-aluOutput[5]                 : 97        : output : TTL               :         :           : N              
-GND*                         : 98        :        :                   :         :           :                
-toWrite[4]                   : 99        : input  : TTL               :         :           : N              
-readReg2[0]                  : 100       : output : TTL               :         :           : N              
+toWrite[0]                   : 97        : input  : TTL               :         :           : N              
+RegDst                       : 98        : output : TTL               :         :           : N              
+readReg2[1]                  : 99        : output : TTL               :         :           : N              
+readReg2[7]                  : 100       : output : TTL               :         :           : N              
 GND*                         : 101       :        :                   :         :           :                
 GND*                         : 102       :        :                   :         :           :                
-readReg1[1]                  : 103       : output : TTL               :         :           : N              
+GND*                         : 103       :        :                   :         :           :                
 GND_INT                      : 104       : gnd    :                   :         :           :                
 GND*                         : 105       :        :                   :         :           :                
-readReg2[4]                  : 106       : output : TTL               :         :           : N              
+GND*                         : 106       :        :                   :         :           :                
 GND*                         : 107       :        :                   :         :           :                
 GND*                         : 108       :        :                   :         :           :                
-GND*                         : 109       :        :                   :         :           :                
+readReg1[3]                  : 109       : output : TTL               :         :           : N              
 GND*                         : 110       :        :                   :         :           :                
 GND*                         : 111       :        :                   :         :           :                
 VCC_INT                      : 112       : power  :                   : 5.0V    :           :                
-GND*                         : 113       :        :                   :         :           :                
-GND*                         : 114       :        :                   :         :           :                
+readReg1[2]                  : 113       : output : TTL               :         :           : N              
+toWrite[1]                   : 114       : input  : TTL               :         :           : N              
 GND*                         : 115       :        :                   :         :           :                
-clk1                         : 116       : output : TTL               :         :           : N              
+readReg1[0]                  : 116       : output : TTL               :         :           : N              
 GND*                         : 117       :        :                   :         :           :                
 GND*                         : 118       :        :                   :         :           :                
 GND*                         : 119       :        :                   :         :           :                
@@ -167,118 +167,118 @@ VCC_INT                      : 122       : power  :                   : 5.0V    
 MSEL1                        : 123       : input  :                   :         :           :                
 MSEL0                        : 124       : input  :                   :         :           :                
 GND_INT                      : 125       : gnd    :                   :         :           :                
-readReg2[5]                  : 126       : output : TTL               :         :           : N              
-toWrite[6]                   : 127       : input  : TTL               :         :           : N              
-instruction[10]              : 128       : output : TTL               :         :           : N              
-instruction[14]              : 129       : output : TTL               :         :           : N              
+aluOutput[4]                 : 126       : output : TTL               :         :           : N              
+ALUOp[2]                     : 127       : output : TTL               :         :           : N              
+aluOutput[5]                 : 128       : output : TTL               :         :           : N              
+testALUOut[1]                : 129       : output : TTL               :         :           : N              
 VCC_INT                      : 130       : power  :                   : 5.0V    :           :                
-opCodeOut[1]                 : 131       : output : TTL               :         :           : N              
-GND*                         : 132       :        :                   :         :           :                
-instruction[12]              : 133       : output : TTL               :         :           : N              
-opCodeOut[0]                 : 134       : output : TTL               :         :           : N              
+reg3[0]                      : 131       : output : TTL               :         :           : N              
+instruction[3]               : 132       : output : TTL               :         :           : N              
+reg1[0]                      : 133       : output : TTL               :         :           : N              
+GND*                         : 134       :        :                   :         :           :                
 GND_INT                      : 135       : gnd    :                   :         :           :                
-instruction[13]              : 136       : output : TTL               :         :           : N              
-GND*                         : 137       :        :                   :         :           :                
-readReg1[5]                  : 138       : output : TTL               :         :           : N              
-aluCode[2]                   : 139       : output : TTL               :         :           : N              
+instruction[9]               : 136       : output : TTL               :         :           : N              
+imm9[3]                      : 137       : output : TTL               :         :           : N              
+aluCode[0]                   : 138       : output : TTL               :         :           : N              
+MemRead                      : 139       : output : TTL               :         :           : N              
 VCC_INT                      : 140       : power  :                   : 5.0V    :           :                
-ALUOp[2]                     : 141       : output : TTL               :         :           : N              
-aluOutput[0]                 : 142       : output : TTL               :         :           : N              
-MemWrite                     : 143       : output : TTL               :         :           : N              
-imm6[5]                      : 144       : output : TTL               :         :           : N              
+imm9[0]                      : 141       : output : TTL               :         :           : N              
+testZero                     : 142       : output : TTL               :         :           : N              
+instruction[0]               : 143       : output : TTL               :         :           : N              
+instruction[6]               : 144       : output : TTL               :         :           : N              
 GND_INT                      : 145       : gnd    :                   :         :           :                
 reg2[0]                      : 146       : output : TTL               :         :           : N              
-instruction[6]               : 147       : output : TTL               :         :           : N              
-reg3[1]                      : 148       : output : TTL               :         :           : N              
-clk2                         : 149       : output : TTL               :         :           : N              
+outputPC[2]                  : 147       : output : TTL               :         :           : N              
+imm6[4]                      : 148       : output : TTL               :         :           : N              
+instruction[14]              : 149       : output : TTL               :         :           : N              
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
-opCodeOut[3]                 : 151       : output : TTL               :         :           : N              
-instruction[8]               : 152       : output : TTL               :         :           : N              
-reg2[2]                      : 153       : output : TTL               :         :           : N              
-opCodeOut[2]                 : 154       : output : TTL               :         :           : N              
+clk2                         : 151       : output : TTL               :         :           : N              
+opCodeOut[1]                 : 152       : output : TTL               :         :           : N              
+aluOutput[7]                 : 153       : output : TTL               :         :           : N              
+ALUOp[0]                     : 154       : output : TTL               :         :           : N              
 GND_INT                      : 155       : gnd    :                   :         :           :                
-readReg2[7]                  : 156       : output : TTL               :         :           : N              
-outputPC[5]                  : 157       : output : TTL               :         :           : N              
-imm9[8]                      : 158       : output : TTL               :         :           : N              
-GND*                         : 159       :        :                   :         :           :                
+aluOutput[1]                 : 156       : output : TTL               :         :           : N              
+readReg2[6]                  : 157       : output : TTL               :         :           : N              
+MemWrite                     : 158       : output : TTL               :         :           : N              
+outputPC[0]                  : 159       : output : TTL               :         :           : N              
 VCC_INT                      : 160       : power  :                   : 5.0V    :           :                
-zeroFlag                     : 161       : output : TTL               :         :           : N              
-instruction[0]               : 162       : output : TTL               :         :           : N              
-imm6[0]                      : 163       : output : TTL               :         :           : N              
-imm9[0]                      : 164       : output : TTL               :         :           : N              
+reg3[1]                      : 161       : output : TTL               :         :           : N              
+imm6[2]                      : 162       : output : TTL               :         :           : N              
+imm9[4]                      : 163       : output : TTL               :         :           : N              
+GND*                         : 164       :        :                   :         :           :                
 GND_INT                      : 165       : gnd    :                   :         :           :                
-ALUOp[0]                     : 166       : output : TTL               :         :           : N              
-aluOutput[4]                 : 167       : output : TTL               :         :           : N              
-ALUSrc                       : 168       : output : TTL               :         :           : N              
-signFlag                     : 169       : output : TTL               :         :           : N              
+reg2[2]                      : 166       : output : TTL               :         :           : N              
+imm9[8]                      : 167       : output : TTL               :         :           : N              
+outputPC[1]                  : 168       : output : TTL               :         :           : N              
+aluOutput[3]                 : 169       : output : TTL               :         :           : N              
 VCC_INT                      : 170       : power  :                   : 5.0V    :           :                
-outputPC[7]                  : 171       : output : TTL               :         :           : N              
-instruction[3]               : 172       : output : TTL               :         :           : N              
-imm9[3]                      : 173       : output : TTL               :         :           : N              
-reg3[0]                      : 174       : output : TTL               :         :           : N              
-outputPC[0]                  : 175       : output : TTL               :         :           : N              
+opCodeOut[0]                 : 171       : output : TTL               :         :           : N              
+GND*                         : 172       :        :                   :         :           :                
+outputPC[3]                  : 173       : output : TTL               :         :           : N              
+instruction[15]              : 174       : output : TTL               :         :           : N              
+GND*                         : 175       :        :                   :         :           :                
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                
 nCE                          : 178       : input  :                   :         :           :                
 DCLK                         : 179       : bidir  :                   :         :           :                
 DATA0                        : 180       : input  :                   :         :           :                
 GND*                         : 181       :        :                   :         :           :                
-GND*                         : 182       :        :                   :         :           :                
+readReg1[7]                  : 182       : output : TTL               :         :           : N              
 GND*                         : 183       :        :                   :         :           :                
 GND*                         : 184       :        :                   :         :           :                
 GND*                         : 185       :        :                   :         :           :                
-GND*                         : 186       :        :                   :         :           :                
+readReg2[5]                  : 186       : output : TTL               :         :           : N              
 GND*                         : 187       :        :                   :         :           :                
-readReg2[1]                  : 188       : output : TTL               :         :           : N              
+GND*                         : 188       :        :                   :         :           :                
 VCC_INT                      : 189       : power  :                   : 5.0V    :           :                
 GND*                         : 190       :        :                   :         :           :                
-GND*                         : 191       :        :                   :         :           :                
+toWrite[5]                   : 191       : input  : TTL               :         :           : N              
 GND*                         : 192       :        :                   :         :           :                
 GND*                         : 193       :        :                   :         :           :                
-GND*                         : 194       :        :                   :         :           :                
-GND*                         : 195       :        :                   :         :           :                
+readReg1[1]                  : 194       : output : TTL               :         :           : N              
+readReg1[5]                  : 195       : output : TTL               :         :           : N              
 GND*                         : 196       :        :                   :         :           :                
 GND_INT                      : 197       : gnd    :                   :         :           :                
-GND*                         : 198       :        :                   :         :           :                
+toWrite[6]                   : 198       : input  : TTL               :         :           : N              
 GND*                         : 199       :        :                   :         :           :                
-GND*                         : 200       :        :                   :         :           :                
-overflowFlag                 : 201       : output : TTL               :         :           : N              
+readReg2[4]                  : 200       : output : TTL               :         :           : N              
+MemToReg                     : 201       : output : TTL               :         :           : N              
 GND*                         : 202       :        :                   :         :           :                
-GND*                         : 203       :        :                   :         :           :                
-GND*                         : 204       :        :                   :         :           :                
+RegWrite                     : 203       : output : TTL               :         :           : N              
+instruction[2]               : 204       : output : TTL               :         :           : N              
 VCC_INT                      : 205       : power  :                   : 5.0V    :           :                
-GND*                         : 206       :        :                   :         :           :                
-aluOutput[2]                 : 207       : output : TTL               :         :           : N              
+signFlag                     : 206       : output : TTL               :         :           : N              
+outputPC[7]                  : 207       : output : TTL               :         :           : N              
 outputPC[6]                  : 208       : output : TTL               :         :           : N              
-outputPC[4]                  : 209       : output : TTL               :         :           : N              
+aluOutput[0]                 : 209       : output : TTL               :         :           : N              
 GND+                         : 210       :        :                   :         :           :                
-GND+                         : 211       :        :                   :         :           :                
+val2test[2]                  : 211       : input  : TTL               :         :           : N              
 reset                        : 212       : input  : TTL               :         :           : N              
-ALUOp[1]                     : 213       : output : TTL               :         :           : N              
+testALUOut[5]                : 213       : output : TTL               :         :           : N              
 imm6[1]                      : 214       : output : TTL               :         :           : N              
-GND*                         : 215       :        :                   :         :           :                
+testALUCode[1]               : 215       : input  : TTL               :         :           : N              
 GND_INT                      : 216       : gnd    :                   :         :           :                
-GND*                         : 217       :        :                   :         :           :                
+val1test[1]                  : 217       : input  : TTL               :         :           : N              
 GND*                         : 218       :        :                   :         :           :                
-GND*                         : 219       :        :                   :         :           :                
-GND*                         : 220       :        :                   :         :           :                
-GND*                         : 221       :        :                   :         :           :                
+val2test[6]                  : 219       : input  : TTL               :         :           : N              
+testALUCode[2]               : 220       : input  : TTL               :         :           : N              
+readReg2[0]                  : 221       : output : TTL               :         :           : N              
 GND*                         : 222       :        :                   :         :           :                
-GND*                         : 223       :        :                   :         :           :                
+val1test[0]                  : 223       : input  : TTL               :         :           : N              
 VCC_INT                      : 224       : power  :                   : 5.0V    :           :                
-readReg2[2]                  : 225       : output : TTL               :         :           : N              
-toWrite[7]                   : 226       : input  : TTL               :         :           : N              
-GND*                         : 227       :        :                   :         :           :                
-GND*                         : 228       :        :                   :         :           :                
-GND*                         : 229       :        :                   :         :           :                
-GND*                         : 230       :        :                   :         :           :                
+GND*                         : 225       :        :                   :         :           :                
+toWrite[2]                   : 226       : input  : TTL               :         :           : N              
+val1test[4]                  : 227       : input  : TTL               :         :           : N              
+val2test[5]                  : 228       : input  : TTL               :         :           : N              
+testALUOut[2]                : 229       : output : TTL               :         :           : N              
+val1test[3]                  : 230       : input  : TTL               :         :           : N              
 GND*                         : 231       :        :                   :         :           :                
 GND_INT                      : 232       : gnd    :                   :         :           :                
 GND*                         : 233       :        :                   :         :           :                
-readReg1[3]                  : 234       : output : TTL               :         :           : N              
-readReg1[6]                  : 235       : output : TTL               :         :           : N              
-readReg1[4]                  : 236       : output : TTL               :         :           : N              
+val1test[5]                  : 234       : input  : TTL               :         :           : N              
+val2test[3]                  : 235       : input  : TTL               :         :           : N              
+GND*                         : 236       :        :                   :         :           :                
 GND*                         : 237       :        :                   :         :           :                
-readReg2[6]                  : 238       : output : TTL               :         :           : N              
-GND*                         : 239       :        :                   :         :           :                
-GND*                         : 240       :        :                   :         :           :                
+GND*                         : 238       :        :                   :         :           :                
+testALUOut[0]                : 239       : output : TTL               :         :           : N              
+val2test[4]                  : 240       : input  : TTL               :         :           : N              

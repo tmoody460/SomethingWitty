@@ -2,22 +2,52 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 42.700 ns
+From           : testALUCode[1]
+To             : ALU:inst37|varOutput[2]
+From Clock     : --
+To Clock       : testALUCode[0]
+Failed Paths   : 0
+
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 74.600 ns
+Actual Time    : 76.200 ns
 From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
-To             : aluOutput[6]
+To             : aluOutput[7]
 From Clock     : clk
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 57.900 ns
+From           : testALUCode[1]
+To             : testALUOut[7]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.700 ns
+From           : val2test[1]
+To             : ALU:inst37|varOutput[1]
+From Clock     : --
+To Clock       : testALUCode[1]
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 43.67 MHz ( period = 22.900 ns )
+Actual Time    : 42.92 MHz ( period = 23.300 ns )
 From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
-To             : ALU:inst19|tempOutput[6]
+To             : ALU:inst38|varOutput[6]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -27,7 +57,7 @@ Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
 From           : ProgramCounter:inst1|lpm_counter:tempPC_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
-To             : ALU:inst19|tempOutput[0]
+To             : ALU:inst38|varOutput[4]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 56

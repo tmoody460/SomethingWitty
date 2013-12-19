@@ -38,6 +38,22 @@ ALUValue2[4] <= BUSMUX:inst23.result[4]
 ALUValue2[5] <= BUSMUX:inst23.result[5]
 ALUValue2[6] <= BUSMUX:inst23.result[6]
 ALUValue2[7] <= BUSMUX:inst23.result[7]
+dataRead[0] <= RAM:inst5.q[0]
+dataRead[1] <= RAM:inst5.q[1]
+dataRead[2] <= RAM:inst5.q[2]
+dataRead[3] <= RAM:inst5.q[3]
+dataRead[4] <= RAM:inst5.q[4]
+dataRead[5] <= RAM:inst5.q[5]
+dataRead[6] <= RAM:inst5.q[6]
+dataRead[7] <= RAM:inst5.q[7]
+dataToWrite[0] <= BUSMUX:inst25.result[0]
+dataToWrite[1] <= BUSMUX:inst25.result[1]
+dataToWrite[2] <= BUSMUX:inst25.result[2]
+dataToWrite[3] <= BUSMUX:inst25.result[3]
+dataToWrite[4] <= BUSMUX:inst25.result[4]
+dataToWrite[5] <= BUSMUX:inst25.result[5]
+dataToWrite[6] <= BUSMUX:inst25.result[6]
+dataToWrite[7] <= BUSMUX:inst25.result[7]
 imm6[0] <= Decoder:inst14.imm6[0]
 imm6[1] <= Decoder:inst14.imm6[1]
 imm6[2] <= Decoder:inst14.imm6[2]
@@ -1819,6 +1835,398 @@ readReg[4] <= tempReadReg~51.DB_MAX_OUTPUT_PORT_TYPE
 readReg[5] <= tempReadReg~50.DB_MAX_OUTPUT_PORT_TYPE
 readReg[6] <= tempReadReg~49.DB_MAX_OUTPUT_PORT_TYPE
 readReg[7] <= tempReadReg~48.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+dataa[4] => lpm_mux:$00000.data[0][4]
+dataa[5] => lpm_mux:$00000.data[0][5]
+dataa[6] => lpm_mux:$00000.data[0][6]
+dataa[7] => lpm_mux:$00000.data[0][7]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+datab[4] => lpm_mux:$00000.data[1][4]
+datab[5] => lpm_mux:$00000.data[1][5]
+datab[6] => lpm_mux:$00000.data[1][6]
+datab[7] => lpm_mux:$00000.data[1][7]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+result[4] <= lpm_mux:$00000.result[4]
+result[5] <= lpm_mux:$00000.result[5]
+result[6] <= lpm_mux:$00000.result[6]
+result[7] <= lpm_mux:$00000.result[7]
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000
+data[0][0] => muxlut:$00009.data[0]
+data[0][1] => muxlut:$00011.data[0]
+data[0][2] => muxlut:$00013.data[0]
+data[0][3] => muxlut:$00015.data[0]
+data[0][4] => muxlut:$00017.data[0]
+data[0][5] => muxlut:$00019.data[0]
+data[0][6] => muxlut:$00021.data[0]
+data[0][7] => muxlut:$00023.data[0]
+data[1][0] => muxlut:$00009.data[1]
+data[1][1] => muxlut:$00011.data[1]
+data[1][2] => muxlut:$00013.data[1]
+data[1][3] => muxlut:$00015.data[1]
+data[1][4] => muxlut:$00017.data[1]
+data[1][5] => muxlut:$00019.data[1]
+data[1][6] => muxlut:$00021.data[1]
+data[1][7] => muxlut:$00023.data[1]
+sel[0] => muxlut:$00023.select[0]
+sel[0] => muxlut:$00021.select[0]
+sel[0] => muxlut:$00019.select[0]
+sel[0] => muxlut:$00017.select[0]
+sel[0] => muxlut:$00015.select[0]
+sel[0] => muxlut:$00013.select[0]
+sel[0] => muxlut:$00011.select[0]
+sel[0] => muxlut:$00009.select[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= altshift:external_latency_ffs.result[0]
+result[1] <= altshift:external_latency_ffs.result[1]
+result[2] <= altshift:external_latency_ffs.result[2]
+result[3] <= altshift:external_latency_ffs.result[3]
+result[4] <= altshift:external_latency_ffs.result[4]
+result[5] <= altshift:external_latency_ffs.result[5]
+result[6] <= altshift:external_latency_ffs.result[6]
+result[7] <= altshift:external_latency_ffs.result[7]
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|altshift:external_latency_ffs
+data[0] => result[0].DATAIN
+data[1] => result[1].DATAIN
+data[2] => result[2].DATAIN
+data[3] => result[3].DATAIN
+data[4] => result[4].DATAIN
+data[5] => result[5].DATAIN
+data[6] => result[6].DATAIN
+data[7] => result[7].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00009
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00011
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00013
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00015
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00017
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00019
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00021
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|BUSMUX:inst25|lpm_mux:$00000|muxlut:$00023
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|RAM:inst5
+address[0] => lpm_ram_dq:lpm_ram_dq_component.address[0]
+address[1] => lpm_ram_dq:lpm_ram_dq_component.address[1]
+address[2] => lpm_ram_dq:lpm_ram_dq_component.address[2]
+address[3] => lpm_ram_dq:lpm_ram_dq_component.address[3]
+address[4] => lpm_ram_dq:lpm_ram_dq_component.address[4]
+address[5] => lpm_ram_dq:lpm_ram_dq_component.address[5]
+address[6] => lpm_ram_dq:lpm_ram_dq_component.address[6]
+address[7] => lpm_ram_dq:lpm_ram_dq_component.address[7]
+data[0] => lpm_ram_dq:lpm_ram_dq_component.data[0]
+data[1] => lpm_ram_dq:lpm_ram_dq_component.data[1]
+data[2] => lpm_ram_dq:lpm_ram_dq_component.data[2]
+data[3] => lpm_ram_dq:lpm_ram_dq_component.data[3]
+data[4] => lpm_ram_dq:lpm_ram_dq_component.data[4]
+data[5] => lpm_ram_dq:lpm_ram_dq_component.data[5]
+data[6] => lpm_ram_dq:lpm_ram_dq_component.data[6]
+data[7] => lpm_ram_dq:lpm_ram_dq_component.data[7]
+inclock => lpm_ram_dq:lpm_ram_dq_component.inclock
+we => lpm_ram_dq:lpm_ram_dq_component.we
+q[0] <= lpm_ram_dq:lpm_ram_dq_component.q[0]
+q[1] <= lpm_ram_dq:lpm_ram_dq_component.q[1]
+q[2] <= lpm_ram_dq:lpm_ram_dq_component.q[2]
+q[3] <= lpm_ram_dq:lpm_ram_dq_component.q[3]
+q[4] <= lpm_ram_dq:lpm_ram_dq_component.q[4]
+q[5] <= lpm_ram_dq:lpm_ram_dq_component.q[5]
+q[6] <= lpm_ram_dq:lpm_ram_dq_component.q[6]
+q[7] <= lpm_ram_dq:lpm_ram_dq_component.q[7]
+
+
+|Processor|RAM:inst5|lpm_ram_dq:lpm_ram_dq_component
+data[0] => altram:sram.data[0]
+data[1] => altram:sram.data[1]
+data[2] => altram:sram.data[2]
+data[3] => altram:sram.data[3]
+data[4] => altram:sram.data[4]
+data[5] => altram:sram.data[5]
+data[6] => altram:sram.data[6]
+data[7] => altram:sram.data[7]
+address[0] => altram:sram.address[0]
+address[1] => altram:sram.address[1]
+address[2] => altram:sram.address[2]
+address[3] => altram:sram.address[3]
+address[4] => altram:sram.address[4]
+address[5] => altram:sram.address[5]
+address[6] => altram:sram.address[6]
+address[7] => altram:sram.address[7]
+inclock => altram:sram.clocki
+outclock => ~NO_FANOUT~
+we => altram:sram.we
+q[0] <= altram:sram.q[0]
+q[1] <= altram:sram.q[1]
+q[2] <= altram:sram.q[2]
+q[3] <= altram:sram.q[3]
+q[4] <= altram:sram.q[4]
+q[5] <= altram:sram.q[5]
+q[6] <= altram:sram.q[6]
+q[7] <= altram:sram.q[7]
+
+
+|Processor|RAM:inst5|lpm_ram_dq:lpm_ram_dq_component|altram:sram
+we => segment[0][7].WE
+we => segment[0][6].WE
+we => segment[0][5].WE
+we => segment[0][4].WE
+we => segment[0][3].WE
+we => segment[0][2].WE
+we => segment[0][1].WE
+we => segment[0][0].WE
+data[0] => segment[0][0].DATAIN
+data[1] => segment[0][1].DATAIN
+data[2] => segment[0][2].DATAIN
+data[3] => segment[0][3].DATAIN
+data[4] => segment[0][4].DATAIN
+data[5] => segment[0][5].DATAIN
+data[6] => segment[0][6].DATAIN
+data[7] => segment[0][7].DATAIN
+address[0] => segment[0][7].WADDR
+address[0] => segment[0][7].RADDR
+address[0] => segment[0][6].WADDR
+address[0] => segment[0][6].RADDR
+address[0] => segment[0][5].WADDR
+address[0] => segment[0][5].RADDR
+address[0] => segment[0][4].WADDR
+address[0] => segment[0][4].RADDR
+address[0] => segment[0][3].WADDR
+address[0] => segment[0][3].RADDR
+address[0] => segment[0][2].WADDR
+address[0] => segment[0][2].RADDR
+address[0] => segment[0][1].WADDR
+address[0] => segment[0][1].RADDR
+address[0] => segment[0][0].WADDR
+address[0] => segment[0][0].RADDR
+address[1] => segment[0][7].WADDR1
+address[1] => segment[0][7].RADDR1
+address[1] => segment[0][6].WADDR1
+address[1] => segment[0][6].RADDR1
+address[1] => segment[0][5].WADDR1
+address[1] => segment[0][5].RADDR1
+address[1] => segment[0][4].WADDR1
+address[1] => segment[0][4].RADDR1
+address[1] => segment[0][3].WADDR1
+address[1] => segment[0][3].RADDR1
+address[1] => segment[0][2].WADDR1
+address[1] => segment[0][2].RADDR1
+address[1] => segment[0][1].WADDR1
+address[1] => segment[0][1].RADDR1
+address[1] => segment[0][0].WADDR1
+address[1] => segment[0][0].RADDR1
+address[2] => segment[0][7].WADDR2
+address[2] => segment[0][7].RADDR2
+address[2] => segment[0][6].WADDR2
+address[2] => segment[0][6].RADDR2
+address[2] => segment[0][5].WADDR2
+address[2] => segment[0][5].RADDR2
+address[2] => segment[0][4].WADDR2
+address[2] => segment[0][4].RADDR2
+address[2] => segment[0][3].WADDR2
+address[2] => segment[0][3].RADDR2
+address[2] => segment[0][2].WADDR2
+address[2] => segment[0][2].RADDR2
+address[2] => segment[0][1].WADDR2
+address[2] => segment[0][1].RADDR2
+address[2] => segment[0][0].WADDR2
+address[2] => segment[0][0].RADDR2
+address[3] => segment[0][7].WADDR3
+address[3] => segment[0][7].RADDR3
+address[3] => segment[0][6].WADDR3
+address[3] => segment[0][6].RADDR3
+address[3] => segment[0][5].WADDR3
+address[3] => segment[0][5].RADDR3
+address[3] => segment[0][4].WADDR3
+address[3] => segment[0][4].RADDR3
+address[3] => segment[0][3].WADDR3
+address[3] => segment[0][3].RADDR3
+address[3] => segment[0][2].WADDR3
+address[3] => segment[0][2].RADDR3
+address[3] => segment[0][1].WADDR3
+address[3] => segment[0][1].RADDR3
+address[3] => segment[0][0].WADDR3
+address[3] => segment[0][0].RADDR3
+address[4] => segment[0][7].WADDR4
+address[4] => segment[0][7].RADDR4
+address[4] => segment[0][6].WADDR4
+address[4] => segment[0][6].RADDR4
+address[4] => segment[0][5].WADDR4
+address[4] => segment[0][5].RADDR4
+address[4] => segment[0][4].WADDR4
+address[4] => segment[0][4].RADDR4
+address[4] => segment[0][3].WADDR4
+address[4] => segment[0][3].RADDR4
+address[4] => segment[0][2].WADDR4
+address[4] => segment[0][2].RADDR4
+address[4] => segment[0][1].WADDR4
+address[4] => segment[0][1].RADDR4
+address[4] => segment[0][0].WADDR4
+address[4] => segment[0][0].RADDR4
+address[5] => segment[0][7].WADDR5
+address[5] => segment[0][7].RADDR5
+address[5] => segment[0][6].WADDR5
+address[5] => segment[0][6].RADDR5
+address[5] => segment[0][5].WADDR5
+address[5] => segment[0][5].RADDR5
+address[5] => segment[0][4].WADDR5
+address[5] => segment[0][4].RADDR5
+address[5] => segment[0][3].WADDR5
+address[5] => segment[0][3].RADDR5
+address[5] => segment[0][2].WADDR5
+address[5] => segment[0][2].RADDR5
+address[5] => segment[0][1].WADDR5
+address[5] => segment[0][1].RADDR5
+address[5] => segment[0][0].WADDR5
+address[5] => segment[0][0].RADDR5
+address[6] => segment[0][7].WADDR6
+address[6] => segment[0][7].RADDR6
+address[6] => segment[0][6].WADDR6
+address[6] => segment[0][6].RADDR6
+address[6] => segment[0][5].WADDR6
+address[6] => segment[0][5].RADDR6
+address[6] => segment[0][4].WADDR6
+address[6] => segment[0][4].RADDR6
+address[6] => segment[0][3].WADDR6
+address[6] => segment[0][3].RADDR6
+address[6] => segment[0][2].WADDR6
+address[6] => segment[0][2].RADDR6
+address[6] => segment[0][1].WADDR6
+address[6] => segment[0][1].RADDR6
+address[6] => segment[0][0].WADDR6
+address[6] => segment[0][0].RADDR6
+address[7] => segment[0][7].WADDR7
+address[7] => segment[0][7].RADDR7
+address[7] => segment[0][6].WADDR7
+address[7] => segment[0][6].RADDR7
+address[7] => segment[0][5].WADDR7
+address[7] => segment[0][5].RADDR7
+address[7] => segment[0][4].WADDR7
+address[7] => segment[0][4].RADDR7
+address[7] => segment[0][3].WADDR7
+address[7] => segment[0][3].RADDR7
+address[7] => segment[0][2].WADDR7
+address[7] => segment[0][2].RADDR7
+address[7] => segment[0][1].WADDR7
+address[7] => segment[0][1].RADDR7
+address[7] => segment[0][0].WADDR7
+address[7] => segment[0][0].RADDR7
+clocki => segment[0][7].CLK0
+clocki => segment[0][6].CLK0
+clocki => segment[0][5].CLK0
+clocki => segment[0][4].CLK0
+clocki => segment[0][3].CLK0
+clocki => segment[0][2].CLK0
+clocki => segment[0][1].CLK0
+clocki => segment[0][0].CLK0
+clocko => ~NO_FANOUT~
+be => ~NO_FANOUT~
+q[0] <= segment[0][0].DATAOUT
+q[1] <= segment[0][1].DATAOUT
+q[2] <= segment[0][2].DATAOUT
+q[3] <= segment[0][3].DATAOUT
+q[4] <= segment[0][4].DATAOUT
+q[5] <= segment[0][5].DATAOUT
+q[6] <= segment[0][6].DATAOUT
+q[7] <= segment[0][7].DATAOUT
 
 
 |Processor|BUSMUX:inst12

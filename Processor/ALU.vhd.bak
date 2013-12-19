@@ -41,22 +41,11 @@ BEGIN
 		varOutput := std_logic_vector(unsigned(value1) srl to_integer(unsigned(value2)));
 		tempOverflow <= '0';
 	ELSIF (aluOp(2) = '1' AND aluOp(1) = '1' AND aluOp(0) = '1') THEN
-		varOutput := std_logic_vector(unsigned(value1) + unsigned(value2));		
-		
---		IF ((value1(7) = '1' AND value2(7) = '1' AND varOutput(7) = '0') OR (value1(7) = '0' AND value2(7) = '0' AND varOutput(7) = '1')) THEN
---			tempOverflow <= '1';
---		ELSE
---			tempOverflow <= '0';
---		END IF;
-		
+		varOutput := std_logic_vector(unsigned(value1) + unsigned(value2));
+	
 	ELSIF (aluOp(2) = '1' AND aluOp(1) = '1' AND aluOp(0) = '0') THEN
 		varOutput := std_logic_vector(unsigned(value1) - unsigned(value2));
 		
-		IF ((varOutput(7) = '1' AND value2(7) = '1' AND value1(7) = '0') OR (varOutput(7) = '0' AND value2(7) = '0' AND value1(7) = '1')) THEN
-			tempOverflow <= '1';
-		ELSE
-			tempOverflow <= '0';
-		END IF;
 	ELSE
 		--no commands match
 	END IF;
@@ -67,13 +56,25 @@ BEGIN
 		tempZero <= '0';
 	END IF;
 	
+	IF ((aluOp(2) = '1' AND aluOp(1) = '1' AND aluOp(0) = '1') 
+		AND ((value1(7) = '1' AND value2(7) = '1' AND varOutput(7) = '0') 
+			OR (value1(7) = '0' AND value2(7) = '0' AND varOutput(7) = '1'))) THEN
+		tempOverflow <= '1';
+	ELSIF ((aluOp(2) = '1' AND aluOp(1) = '1' AND aluOp(0) = '0') 
+		AND ((varOutput(7) = '1' AND value2(7) = '1' AND value1(7) = '0') 
+			OR (varOutput(7) = '0' AND value2(7) = '0' AND value1(7) = '1'))) THEN
+		tempOverflow <= '1';
+	ELSE
+		tempOverflow <= '0';
+	END IF;
+	
 	tempSign <= to_bitvector(varOutput)(7);
 	tempOutput <= varOutput;
 END PROCESS;
 
 output <= tempOutput;
 zero <= tempZero;
-overflow <= tempOverflow;
+overflow <= '1';
 sign <= tempSign;
 END behavior;
 
